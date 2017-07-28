@@ -1,0 +1,79 @@
+#experienceHeaders {
+  color: #00d1b2;
+  text-align: center;
+  padding-bottom: 0px;
+  margin-bottom: 5px;
+}
+
+#experienceLogos {
+  text-align: center;
+}
+
+/*.g-signin2 {
+  border: solid;
+  border-color: red;
+}*/
+
+#icons {
+  padding-right: 5px;
+  padding-top: 3px;
+}
+
+#homeMessage {
+  padding-top: 20px;
+}
+
+.hero {
+  text-align: center
+}
+
+#homeButton {
+  margin-top: 0px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#homeButton a:link {
+  color: #00d1b2;
+}
+
+#homeButton li {
+  background-color: white;
+}
+
+#knight {
+  height: 13%;
+  width: 13%;
+}
+
+#illustrations {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#illustrationSub{
+  text-align: center;
+  color: #00d1b2;
+}
+
+#monster {
+  height: 30%;
+  width: 30%;
+}
+
+.Mission {
+  margin-top: 0px;
+}
+
+.Navigation {
+  text-align: center;
+}
+
+#missionTitle {
+  text-align: center;
+  color: #00d1b2;
+
+}
+#missionSub {
+  text-align: center;
+}
