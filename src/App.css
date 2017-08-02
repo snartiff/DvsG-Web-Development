@@ -1,3 +1,11 @@
+body {
+  font-family: 'Lora', serif;
+}
+
+p {
+  margin-left: 20px;
+}
+
 #experienceHeaders {
   color: #00d1b2;
   text-align: center;
@@ -9,10 +17,20 @@
   text-align: center;
 }
 
-/*.g-signin2 {
-  border: solid;
-  border-color: red;
-}*/
+.blogParagraph {
+  font-family: 'Lora', serif;
+}
+
+.headshotDiv {
+  text-align: center;
+}
+
+.headshot {
+  border-style: solid;
+  border-width: 1px;
+  align-items: center;
+  border-radius: 50%;
+}
 
 #icons {
   padding-right: 5px;
@@ -76,4 +94,9 @@
 }
 #missionSub {
   text-align: center;
+}
+
+#postTitle {
+  text-align: center;
+  color: #00d1b2;
 }
