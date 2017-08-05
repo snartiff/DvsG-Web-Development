@@ -3,7 +3,28 @@ body {
 }
 
 p {
-  margin-left: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#blogEmail {
+  width: 50%;
+}
+
+#blogButton {
+  display: inline-flex !important;
+}
+
+#subscribeForm {
+  text-align: center !important;
+  margin-top: 20px;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+}
+
+#subscribeHeader {
+  font-weight: bolder;
 }
 
 #experienceHeaders {
@@ -92,11 +113,17 @@ p {
   color: #00d1b2;
 
 }
+
 #missionSub {
   text-align: center;
 }
 
 #postTitle {
+  text-align: center;
+  color: #00d1b2;
+}
+
+#contactHeader{
   text-align: center;
   color: #00d1b2;
 }

@@ -12,7 +12,8 @@ class App extends Component {
   constructor(props) {
   super(props);
   this.state = {
-    posts: []
+    posts: [],
+    comments: []
   };
 }
 
@@ -22,11 +23,20 @@ componentDidMount() {
       this.setState({
         posts: response.data
       })
-      console.log(response);
     })
     .catch( (error) => {
       console.log(error);
     });
+
+    axios.get('http://www.dvsgblog.com/wp-json/wp/v2/comments')
+      .then( (response) => {
+        this.setState({
+          comments: response.data
+        })
+      })
+      .catch( (error) => {
+        console.log(error);
+      });
 }
 
   render() {
@@ -34,7 +44,7 @@ componentDidMount() {
     let blogPage = null;
 
     homePage = this.props.location.pathname === "/" ? <Home /> : null;
-    blogPage = this.props.location.pathname === "/blog" ? <Blog posts={this.state.posts} /> : null;
+    blogPage = this.props.location.pathname === "/blog" ? <Blog posts={this.state.posts} comments={this.state.comments} /> : null;
 
     return (
       <div className="App">

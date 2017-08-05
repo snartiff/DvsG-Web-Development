@@ -30,8 +30,7 @@ handleComponentChange(e) {
 
     return (
       <div className="Experience"><br />
-      <h1 id="missionTitle" className="title is-1">What is the CEO&#39;s Background?</h1>
-      <h1 id="missionSub" className="subtitle is-4">professional web development</h1>
+      <h1 id="missionTitle" className="title is-1">What is Sean's Background?</h1>
       <div className="tabs is-small is-toggle is-centered is-fullwidth">
         <ul>
           <li onClick={this.handleComponentChange} className={this.state.tabName === 'MSBA' ? 'is-active': null}>

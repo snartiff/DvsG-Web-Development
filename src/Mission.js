@@ -12,8 +12,7 @@ class Mission extends Component {
   render() {
     return (
       <div className="Mission">
-        <h1 id="missionTitle" className="title is-1">What Will I Do for You?</h1>
-        <h1 id="missionSub" className="subtitle is-4">Bring your ideas to life</h1>
+        <h1 id="missionTitle" className="title is-1">What Can We Accomplish Together?</h1>
         <p>
           My sole purpose as your web developer and designer is to take your
           dreams and make them a reality. DvsG (David vs Goliath) is dedicated to

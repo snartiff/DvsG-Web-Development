@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import 'bulma/css/bulma.css'
 import './font-awesome/css/font-awesome.min.css'
-import axios from 'axios';
 import Parser from 'html-react-parser';
+import Subscribe from './Subscribe.js';
+import ReactDOM from 'react-dom';
 
 class Blog extends Component {
   constructor(props) {
@@ -11,6 +12,13 @@ class Blog extends Component {
   };
 }
 
+componentDidMount() {
+  const iframe = document.getElementById("ifr");
+  ReactDOM.render(
+  <Subscribe/>,
+  iframe
+)
+}
   render() {
     if ( this.props.posts ) {
       return (
@@ -21,6 +29,8 @@ class Blog extends Component {
                 <div>{ Parser( post.content.rendered ) }</div>
               </div>
             )}
+            <div id="ifr">
+            </div>
         </div>
       );
     } else {
