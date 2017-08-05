@@ -13,12 +13,13 @@ class Blog extends Component {
 }
 
 componentDidMount() {
-  const iframe = document.getElementById("ifr");
+  const iframe = document.getElementById("emailSubscribe");
   ReactDOM.render(
-  <Subscribe/>,
-  iframe
-)
+    <Subscribe/>,
+    iframe
+  )
 }
+
   render() {
     if ( this.props.posts ) {
       return (
@@ -29,7 +30,7 @@ componentDidMount() {
                 <div>{ Parser( post.content.rendered ) }</div>
               </div>
             )}
-            <div id="ifr">
+            <div id="emailSubscribe">
             </div>
         </div>
       );
