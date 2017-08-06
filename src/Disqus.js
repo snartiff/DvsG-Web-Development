@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css'
-import './font-awesome/css/font-awesome.min.css'
 import Iframe from 'react-iframe';
 
-class Subscribe extends Component {
+class Disqus extends Component {
   constructor(props) {
   super(props);
   this.state = {
@@ -18,4 +16,4 @@ class Subscribe extends Component {
   }
 }
 
-export default Subscribe;
+export default Disqus;

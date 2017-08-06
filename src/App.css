@@ -7,6 +7,35 @@ p {
   margin-right: 50px;
 }
 
+#hiddenForm {
+position: absolute;
+left: -5000px;
+}
+
+#emailHeader {
+  font-weight: bolder;
+}
+
+#mce-error-response {
+  display: none
+}
+
+#mce-success-response {
+  display: none
+}
+
+#mc-embedded-subscribe {
+  margin-top: 10px;
+}
+
+.subscribeForm {
+  text-align: center !important;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  padding: 0;
+}
+
 #blogEmail {
   width: 50%;
 }
