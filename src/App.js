@@ -34,13 +34,14 @@ componentDidMount() {
     let homePage = null;
     let blogPage = null;
     let postPage = null;
-    let postUrl = this.props.location.pathname;
-    let splitUrl = postUrl.split("/");
-    let postPath = splitUrl.indexOf("post");
+    
+    let currentUrl = this.props.location.pathname;
+    let currentUrlArray = currentUrl.split("/");
+    let isPostPath = currentUrlArray.indexOf("post");
 
     homePage = this.props.location.pathname === "/" ? <Home /> : null;
     blogPage = this.props.location.pathname === "/blog" ? <Blog posts={this.state.posts} comments={this.state.comments} /> : null;
-    postPage = postPath > -1 ? <Post posts={this.state.posts} /> : null;
+    postPage = isPostPath > -1 ? <Post posts={this.state.posts} /> : null;
 
     return (
       <div className="App">

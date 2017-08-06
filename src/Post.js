@@ -1,44 +1,53 @@
 import React, { Component } from 'react';
 import 'bulma/css/bulma.css'
 import './font-awesome/css/font-awesome.min.css'
-import axios from 'axios';
 import Parser from 'html-react-parser';
 
 class Post extends Component {
   constructor(props) {
   super(props);
   this.state = {
-    id: null
+    id: null,
+    currentPost: null
   };
 }
 
 componentDidMount() {
-  var currentPath = window.location.href;
-  var currentPathArray = currentPath.split("/");
-  var currentPathArrayLength = currentPathArray.length;
-  var postId = Number(currentPathArray[currentPathArrayLength - 1]);
-  this.setState({
-    id: postId
-  })
-  var d = document;
-  var s = d.createElement('script');
+  let currentPath = window.location.href;
+  let currentPathArray = currentPath.split("/");
+  let currentPathArrayLength = currentPathArray.length;
+  let postId = Number(currentPathArray[currentPathArrayLength - 1]);
+
+  if (this.props.posts != undefined ) {
+    this.setState({
+      id: postId,
+      currentPost: this.props.posts[postId]
+    })
+  }
+
+  let d = document;
+  let s = d.createElement('script');
   s.src = 'https://dvsg.disqus.com/embed.js';
   s.setAttribute('data-timestamp', + new Date());
   (d.head || d.body).appendChild(s);
 }
 
   render() {
-    if (this.props.posts && this.state.id != null) {
-      let currentPost = this.props.posts[this.state.id];
-      debugger;
+    let postTitle = null;
+    let post = null;
+
+    if (this.state.currentPost != null) {
+      postTitle = <h1 id="postTitle" className="title is-1">{Parser(this.state.currentPost.title.rendered)}</h1>
+      post = <div>{ Parser( this.state.currentPost.content.rendered ) }</div>
+    } else {
+      post = <h1></h1>
+    }
+
+    if (this.props.posts && this.state.id != null && this.state.currentPost != null) {
       return (
         <div className="Post">
-            {this.props.posts.map( (post) =>
-              <div key={this.state.id}>
-                <h1 id="postTitle" className="title is-1">{ Parser( currentPost.title.rendered ) }</h1>
-                <div>{ Parser( currentPost.content.rendered ) }</div>
-              </div>
-            )}
+        <div>{postTitle}</div>
+        <div>{post}</div>
             <div className="subscribeForm">
               <div id="mc_embed_signup">
                 <form action="//dvsgblog.us16.list-manage.com/subscribe/post?u=04d6d69ccd0cbe911bc608528&amp;id=c2cad7d15d" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" noValidate>

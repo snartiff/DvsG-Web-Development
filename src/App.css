@@ -81,6 +81,10 @@ left: -5000px;
   font-family: 'Lora', serif;
 }
 
+#postCard {
+  width: 50%;
+}
+
 .headshotDiv {
   text-align: center;
 }

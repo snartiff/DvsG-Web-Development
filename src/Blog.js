@@ -4,7 +4,7 @@ import './font-awesome/css/font-awesome.min.css'
 import Parser from 'html-react-parser';
 import Post from './Post.js';
 import {Link} from 'react-router-dom';
-
+import striptags from 'striptags';
 
 class Blog extends Component {
   constructor(props) {
@@ -18,11 +18,18 @@ class Blog extends Component {
       return (
         <div className="Blog">
             {this.props.posts.map( (post, index) =>
-              <div key={post.title.index}>
-                <h3 id="postTitle" className="title is-1"><Link to={"/blog/post/" + index}>{ Parser(post.title.rendered) }</Link></h3>
+              <div key={index}>
+                <div id="postCart" className="card">
+                  <header className="card-header">
+                    <p className="card-header-title"><Link to={"/blog/post/" + index}>{ Parser(post.title.rendered) }</Link></p>
+                  </header>
+                  <div className="card-content">
+                    <div className="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.</div>
+                </div>
               </div>
+            </div>
             )}
-        </div>
+      </div>
       );
     } else {
       return (
