@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Blog from './Blog';
+import Post from './Post';
 import About from './About';
 import Process from './Process';
 import Services from './Services';
@@ -20,6 +21,7 @@ ReactDOM.render((
     <div>
       <Route path="/" component={App}/>
       <Route path="/blog" component={Blog}/>
+      <Route path="/blog/post/:id" component={Post}/>
       <Route path="/about" component={About}/>
       <Route path="/about/experience" component={Experience}/>
       <Route path="/about/experience/ca" component={Curriculum}/>

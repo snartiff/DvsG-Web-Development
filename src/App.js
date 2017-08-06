@@ -4,7 +4,8 @@ import './App.css';
 import './font-awesome/css/font-awesome.min.css'
 import Navigation from './Navigation.js';
 import Home from './Home.js';
-import Blog from './Blog.js'
+import Blog from './Blog.js';
+import Post from './Post.js'
 import axios from 'axios';
 import Parser from 'html-react-parser';
 
@@ -27,30 +28,26 @@ componentDidMount() {
     .catch( (error) => {
       console.log(error);
     });
-
-    axios.get('http://www.dvsgblog.com/wp-json/wp/v2/comments')
-      .then( (response) => {
-        this.setState({
-          comments: response.data
-        })
-      })
-      .catch( (error) => {
-        console.log(error);
-      });
 }
 
   render() {
     let homePage = null;
     let blogPage = null;
+    let postPage = null;
+    let postUrl = this.props.location.pathname;
+    let splitUrl = postUrl.split("/");
+    let postPath = splitUrl.indexOf("post");
 
     homePage = this.props.location.pathname === "/" ? <Home /> : null;
     blogPage = this.props.location.pathname === "/blog" ? <Blog posts={this.state.posts} comments={this.state.comments} /> : null;
+    postPage = postPath > -1 ? <Post posts={this.state.posts} /> : null;
 
     return (
       <div className="App">
         <Navigation />
         {homePage}
         {blogPage}
+        {postPage}
       </div>
     );
   }

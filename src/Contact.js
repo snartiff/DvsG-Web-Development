@@ -13,28 +13,28 @@ class Contact extends Component {
   render() {
     return (
       <div className="Contact">
-        <h1  id="contactHeader" className="title is-2">Hello there! Would You Like to Contact Me?</h1>
+        <h1  id="contactHeader" className="title is-2">Contact Form</h1>
         <form action="https://formspree.io/dvsgweb@gmail.com" method="POST">
           <div className="field">
             <label className="label">Name</label>
             <div className="control">
-              <input className="input" type="text" placeholder="your name" type="text" name="name"></input><br></br>
+              <input className="input is-black" type="text" placeholder="your name" type="text" name="name"></input><br></br>
             </div>
           </div>
           <div className="field">
             <label className="label">Email</label>
             <div className="control">
-              <input className="input" placeholder="your email" type="email" name="_replyto"></input><br></br>
+              <input className="input is-black" placeholder="your email" type="email" name="_replyto"></input><br></br>
             </div>
           </div>
           <div className="field">
             <label className="label">Message</label>
             <div className="control">
-              <textarea className="textarea" placeholder="your message" name="message"></textarea><br></br>
+              <textarea className="textarea is-black" placeholder="your message" name="message"></textarea><br></br>
             </div>
           </div>
           <div id="contactForm">
-            <input className="button is-primary is-medium" type="submit" value="Send"></input>
+            <input className="button is-black is-medium" type="submit" value="Send"></input>
           </div>
         </form>
       </div>
