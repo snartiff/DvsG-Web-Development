@@ -7,7 +7,6 @@ class Contact extends Component {
   constructor(props) {
   super(props);
   this.state = {
-    post: ""
   };
 }
   render() {
@@ -27,6 +26,15 @@ class Contact extends Component {
               <input className="input is-black" placeholder="your email" type="email" name="_replyto"></input><br></br>
             </div>
           </div>
+          <label className="label">Subject</label>
+          <div className="select is-black">
+            <select name="_subject">
+              <option>Want services</option>
+              <option>Networking</option>
+              <option>Report a bug</option>
+              <option>Other</option>
+            </select>
+          </div>
           <div className="field">
             <label className="label">Message</label>
             <div className="control">
@@ -36,6 +44,7 @@ class Contact extends Component {
           <div id="contactForm">
             <input className="button is-black is-medium" type="submit" value="Send"></input>
           </div>
+          <input type="hidden" name="_next" value="//localhost:3000/contact" />
         </form>
       </div>
     );

@@ -21,10 +21,18 @@ class Blog extends Component {
               <div key={index}>
                 <div id="postCart" className="card">
                   <header className="card-header">
-                    <p className="card-header-title"><Link to={"/blog/post/" + index}>{ Parser(post.title.rendered) }</Link></p>
+                    <p className="card-header-title"><Link to={"/blog/post/" + index}>{ Parser(post.title.rendered) }</Link></p><br/><br/>
+                      {post.tags.map( (tag, i) =>
+                    <div className="tags" key={i}>
+                        <span className="tag is-primary is-rounded">{tag}</span>
+                    </div>
+                  )}
                   </header>
                   <div className="card-content">
                     <div className="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.</div>
+                </div>
+                <div className="card-footer">
+
                 </div>
               </div>
             </div>

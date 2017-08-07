@@ -18,7 +18,7 @@ componentDidMount() {
   let currentPathArrayLength = currentPathArray.length;
   let postId = Number(currentPathArray[currentPathArrayLength - 1]);
 
-  if (this.props.posts != undefined ) {
+  if (this.props.posts !== undefined ) {
     this.setState({
       id: postId,
       currentPost: this.props.posts[postId]
@@ -36,14 +36,14 @@ componentDidMount() {
     let postTitle = null;
     let post = null;
 
-    if (this.state.currentPost != null) {
+    if (this.state.currentPost !== null) {
       postTitle = <h1 id="postTitle" className="title is-1">{Parser(this.state.currentPost.title.rendered)}</h1>
       post = <div>{ Parser( this.state.currentPost.content.rendered ) }</div>
     } else {
       post = <h1></h1>
     }
 
-    if (this.props.posts && this.state.id != null && this.state.currentPost != null) {
+    if (this.props.posts && this.state.id !== null && this.state.currentPost !== null) {
       return (
         <div className="Post">
         <div>{postTitle}</div>
