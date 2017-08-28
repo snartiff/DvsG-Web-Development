@@ -12,14 +12,14 @@ class Curriculum extends Component {
 
   render() {
     return (
-      <div className="Curriculum"><br />
-        <div id="experienceLogos">
-          <img id="ca_logo" src={ca_logo} alt="curriculum associates logo" height="150"/>
-        </div>
-        <h1 id="experienceHeaders" className="title">Software Engineer</h1>
+      <div className="Curriculum">
+        <div id="alignCenter">
+          <h1 className="title is-1">Software Engineer</h1>
+          <h1 className="subtitle is-6">Curriculum Associates (Nov. 2016 - June 2017)</h1>
+        </div><br />
         <p>Prior to my work at the MSBA, I worked as a Software Engineer at Curriculum Associates, a publishing and education technology company. While at Curriculum Associates,
         I contributed code to the Authoring platform, a content management system used to create online learning activities for students. I sharpened my front-end development skills using
-        libraries such as jQuery and Vue.js. In addition to my coding, I worked with producers and product owners to make sure our features met users&#39; expectations.</p>
+        libraries such as jQuery and Vue.js. In addition to my coding, I worked with producers and product owners to make sure our features met users&#39 expectations.</p>
       </div>
     );
   }

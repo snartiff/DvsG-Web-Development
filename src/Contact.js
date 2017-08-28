@@ -12,7 +12,9 @@ class Contact extends Component {
   render() {
     return (
       <div className="Contact">
-        <h1  id="contactHeader" className="title is-2">Contact Form</h1>
+        <div id="alignCenter">
+          <h1 className="title is-2">Contact</h1>
+        </div><br />
         <form action="https://formspree.io/dvsgweb@gmail.com" method="POST">
           <div className="field">
             <label className="label">Name</label>
@@ -26,23 +28,25 @@ class Contact extends Component {
               <input className="input is-black" placeholder="your email" type="email" name="_replyto"></input><br></br>
             </div>
           </div>
-          <label className="label">Subject</label>
-          <div className="select is-black">
-            <select name="_subject">
-              <option>Want services</option>
-              <option>Networking</option>
-              <option>Report a bug</option>
-              <option>Other</option>
-            </select>
+          <div className="field">
+            <label className="label">Subject</label>
+            <div className="select is-black">
+              <select name="_subject">
+                <option>Get Quote</option>
+                <option>Report Bug</option>
+                <option>Other</option>
+              </select>
+            </div>
           </div>
+
           <div className="field">
             <label className="label">Message</label>
             <div className="control">
               <textarea className="textarea is-black" placeholder="your message" name="message"></textarea><br></br>
             </div>
           </div>
-          <div id="contactForm">
-            <input className="button is-black is-medium" type="submit" value="Send"></input>
+          <div className="field">
+            <input className="button is-primary is-outlined is-medium" type="submit" value="Send"></input>
           </div>
           <input type="hidden" name="_next" value="//localhost:3000/contact" />
         </form>

@@ -20,17 +20,20 @@ class Home extends Component {
           <div className="hero-body">
             <div className="container">
               <h1 className="title">DvsG</h1>
-             <h2 className="subtitle">small business conquers</h2>
+             <h2 className="subtitle">websites that conquer</h2>
             </div>
           </div>
         </section>
         <div id="illustrations">
           <img id="knight" src={knight} alt="knight"/>
           <img id="monster" src={monster} alt="monster"/>
-        </div>
-        <h1 id="illustrationSub" className="title is-2">You&#39;re not going to let Goliath win. Are you?</h1>
+        </div><br />
+        <div id="alignCenter">
+          <h1 id="illustrationSub" className="title is-3">You're not going to let a bad website destroy you.</h1>
+          <h1 className="title is-3">Are you?</h1>
+        </div><br/>
         <div id="homeButton">
-        <li className="button is-primary is-outlined is-large is-focused"><Link to="/about">Defeat Goliath</Link></li>
+        <Link className="button is-primary is-outlined is-large" to="/services">View Services</Link>
         </div>
       </div>
     );

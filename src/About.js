@@ -25,13 +25,13 @@ handleTabChange(e){
 
     let missionPage = null;
 
-    missionPage = this.props.location.pathname === "/about" ? <Mission /> : null;
+    missionPage = this.props.location.pathname === "/mission" ? <Mission /> : null;
 
     return (
       <div className="About">
         <div className="tabs is-large is-centered is-fullwidth">
           <ul>
-            <li onClick={this.handleTabChange} className={this.state.tabName === 'Mission' ? 'is-active': null}><Link to="/about">Mission</Link></li>
+            <li onClick={this.handleTabChange} className={this.state.tabName === 'Mission' ? 'is-active': null}><Link to="/mission">Mission</Link></li>
             <li onClick={this.handleTabChange} className={this.state.tabName === 'Experience' ? 'is-active': null}><Link to="/about/experience">Experience</Link></li>
           </ul>
         </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css'
-import './font-awesome/css/font-awesome.min.css'
+import 'bulma/css/bulma.css';
+import {Link} from 'react-router-dom';
+import './font-awesome/css/font-awesome.min.css';
 
 
 class Services extends Component {
@@ -13,7 +14,7 @@ class Services extends Component {
   render() {
     return (
       <div className="Services">
-        <h1 id="experienceHeaders" className="title is-1">Services</h1>
+        <h1 id="experienceHeaders" className="title is-2">Services</h1>
         <table id="servicesTable" className="table is-striped">
           <thead id="tableHeader" className="is-black">
             <tr>
@@ -56,6 +57,9 @@ class Services extends Component {
             </tr>
           </tbody>
         </table>
+        <div id="alignCenter">
+          <p>Do you want a quote? Use the <Link to="/contact">contact</Link> form to get started.</p>
+        </div>
       </div>
     );
   }

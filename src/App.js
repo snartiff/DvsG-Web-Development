@@ -12,29 +12,16 @@ class App extends Component {
   constructor(props) {
   super(props);
   this.state = {
-    posts: [],
-    tags: []
+    posts: []
   };
 }
 
 componentDidMount() {
-  axios.get('http://www.dvsgblog.com/wp-json/wp/v2/posts')
-    .then( (response) => {
-      this.setState({
-        posts: response.data,
-        blogposts: response.data
-      })
-    })
-    .catch( (error) => {
-      console.log(error);
-    });
-
     axios.get('http://www.dvsgblog.com/wp-json/wp/v2/dvsgpost')
       .then( (response) => {
         this.setState({
-          blogposts: response.data
+          posts: response.data
         })
-        debugger;
       })
       .catch( (error) => {
         console.log(error);

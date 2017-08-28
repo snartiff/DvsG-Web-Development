@@ -26,15 +26,17 @@ handleComponentChange(e) {
   render() {
     let jobPage = null;
 
-    jobPage = this.props.location.pathname === "/about/experience" ? <Msba /> : null;
+    jobPage = this.props.location.pathname === "/experience" ? <Msba /> : null;
 
     return (
       <div className="Experience"><br />
-      <h1 id="missionTitle" className="title is-1">What is Sean's Background?</h1>
+      <div id="alignCenter">
+        <h1 className="title is-1">Experience</h1>
+      </div><br/>
       <div className="tabs is-small is-toggle is-centered is-fullwidth">
         <ul>
           <li onClick={this.handleComponentChange} className={this.state.tabName === 'MSBA' ? 'is-active': null}>
-            <Link to="/about/experience">
+            <Link to="/experience">
               <span>
                 <i id="icons" className="fa fa-building"></i>
               </span>
@@ -42,7 +44,7 @@ handleComponentChange(e) {
             </Link>
           </li>
           <li onClick={this.handleComponentChange} className={this.state.tabName === 'Curriculum Associates' ? 'is-active': null}>
-            <Link to="/about/experience/ca">
+            <Link to="/experience/ca">
               <span>
                 <i id="icons" className="fa fa-book"></i>
               </span>
@@ -50,7 +52,7 @@ handleComponentChange(e) {
             </Link>
           </li>
           <li onClick={this.handleComponentChange} className={this.state.tabName === 'Launch Academy' ? 'is-active': null}>
-            <Link to="/about/experience/launch_academy">
+            <Link to="/experience/launch_academy">
               <span>
                 <i id="icons" className="fa fa-rocket"></i>
               </span>

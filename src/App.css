@@ -2,9 +2,50 @@ body {
   font-family: 'Lora', serif;
 }
 
-p {
+#alignCenter {
+  text-align: center;
+}
+
+.navbar-menu.is-active {
+  box-shadow:none !important;
+ }
+
+.navbar-burger.is-active {
+  color: black !important;
+}
+
+#thumb {
+  box-shadow: 2px 2px 5px #888888;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#whiteSpace {
+  color: white;
+}
+
+#blogTitle {
+  margin-bottom: 20px;
+}
+
+#date {
+  font-weight: 100;
+  font-size: 14px;
+}
+
+#Post {
   margin-left: 50px;
   margin-right: 50px;
+}
+
+#postContent {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+footer {
+  text-align: left !important;
 }
 
 .tags {
@@ -28,7 +69,16 @@ left: -5000px;
 }
 
 #emailHeader {
-  font-weight: bolder;
+  color: black;
+  font-size: 14px;
+}
+
+#navDropdown {
+  color: #00d1b2 !important;
+}
+
+.navbar-link {
+  color: #00d1b2 !important;
 }
 
 #mce-error-response {
@@ -59,6 +109,7 @@ left: -5000px;
   display: inline-flex !important;
 }
 
+
 #subscribeForm {
   text-align: center !important;
   margin-top: 20px;
@@ -72,7 +123,7 @@ left: -5000px;
 }
 
 #experienceHeaders {
-  color: #00d1b2;
+  color: black;
   text-align: center;
   padding-bottom: 0px;
   margin-bottom: 5px;
@@ -120,14 +171,6 @@ left: -5000px;
   padding-bottom: 20px;
 }
 
-#homeButton a:link {
-  color: #00d1b2;
-}
-
-#homeButton li {
-  background-color: white;
-}
-
 #knight {
   height: 13%;
   width: 13%;
@@ -140,7 +183,6 @@ left: -5000px;
 
 #illustrationSub{
   text-align: center;
-  color: #00d1b2;
 }
 
 #monster {
@@ -156,6 +198,13 @@ left: -5000px;
   text-align: center;
 }
 
+@media (max-width: 1000px) {
+  .navbar-link {
+    padding-right: 0px !important;
+  }
+}
+
+
 #missionTitle {
   text-align: center;
   color: #00d1b2;
@@ -168,10 +217,29 @@ left: -5000px;
 
 #postTitle {
   text-align: center;
-  color: #00d1b2;
+  color: black;
 }
 
 #contactHeader{
   text-align: center;
   color: #00d1b2;
+}
+
+.Msba {
+  border: .5px;
+  border-style: solid;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.Msba p {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.Mission p {
+  margin-left: 50px;
+  margin-right: 50px;
 }

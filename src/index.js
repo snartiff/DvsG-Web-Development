@@ -13,6 +13,7 @@ import Experience from './Experience';
 import Mission from './Mission';
 import Curriculum from './Curriculum';
 import Launch from './Launch';
+import Msba from './Msba';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter, Route} from 'react-router-dom';
 
@@ -21,11 +22,11 @@ ReactDOM.render((
     <div>
       <Route path="/" component={App}/>
       <Route path="/blog" component={Blog}/>
-      <Route path="/blog/post/:id" component={Post}/>
-      <Route path="/about" component={About}/>
-      <Route path="/about/experience" component={Experience}/>
-      <Route path="/about/experience/ca" component={Curriculum}/>
-      <Route path="/about/experience/launch_academy" component={Launch}/>
+      <Route path="/blog/post/:id/:title" component={Post}/>
+      <Route path="/mission" component={Mission}/>
+      <Route path="/experience/msba" component={Msba}/>
+      <Route path="/experience/ca" component={Curriculum}/>
+      <Route path="/experience/launch_academy" component={Launch}/>
       <Route path="/process" component={Process}/>
       <Route path="/services" component={Services}/>
       <Route path="/contact" component={Contact}/>
