@@ -4,6 +4,7 @@ body {
 
 .valid {
   border-color: #00d1b2 !important;
+  border-width: 2px !important;
 }
 
 .amcharts-chart-div a {

@@ -8,7 +8,7 @@ class Contact extends Component {
   super(props);
   this.state = {
     subjectValue: "",
-    nameFieldValue: "",
+    nameFieldValue: "Choose Subject",
     emailFieldValue: "",
     messageFieldValue: ""
   };
@@ -28,30 +28,33 @@ handleFieldChange(e) {
     this.setState({
       nameFieldValue: fieldValue
     })
+    //Check if the Name Field has a value
     fieldValue != "" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
 
   } else if ( fieldName == "_replyto" ) {
     this.setState({
       emailFieldValue: fieldValue
     })
-    fieldValue != "" && fieldValue.indexOf('@') > -1 ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
+    //Use email regex expression to check if the Email is valid
+    let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    let isValidEmail = fieldValue.match(emailRegExp);
+    isValidEmail != null ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
 
   } else if (fieldName == "_subject") {
     this.setState({
       subjectValue: fieldValue
     })
+    //Check if the Subject Field is not the default 'Choose Subject' value
     fieldValue != "Choose Subject" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
   } else {
     this.setState({
       messageFieldValue: fieldValue
     })
-    if ( fieldName != "" ) {
-      e.currentTarget.classList.add('valid');
-    }
+    //Check if the Message Field has a value
     fieldValue != "" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
   }
 
-    if (this.state.nameFieldValue != "" && this.state.emailFieldValue != "" && this.state.messageFieldValue != "" && this.state.subjectValue != "Choose Subject") {
+    if (this.state.nameFieldValue != "" && this.state.emailFieldValue != "" && this.state.messageFieldValue != "" && (this.state.subjectValue != "Choose Subject" || this.state.subjectValue != "") ) {
       document.getElementById("submitButton").disabled = false;
     }
 }
@@ -60,6 +63,7 @@ handleSubmit(e) {
     if (this.state.nameFieldValue == "" || this.state.emailFieldValue == "" || this.state.messageFieldValue == "" || this.state.subjectValue == "Choose Subject") {
       e.preventDefault();
       document.getElementById("submitButton").disabled = true;
+      console.log(this.state.subjectValue);
       window.alert("Please complete all of the fields before submitting the form. Thank you!")
     }
 }
