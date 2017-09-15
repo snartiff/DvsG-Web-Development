@@ -38,7 +38,7 @@ componentDidMount() {
 }
 
 openLinkedIn(pageName) {
-    window.open('https://www.linkedin.com');
+    window.open('https://www.linkedin.com/in/seanmnartiff');
 }
 
 openFacebook(pageName) {
@@ -70,15 +70,14 @@ openFacebook(pageName) {
                   Experience
                 </a>
                 <div className="navbar-dropdown">
-                  <Link to="/experience/msba" className="navbar-item">
+                  <Link to="/resume" className="navbar-item">
                     Resume
                   </Link>
-                  <Link to="/experience/portfolio" className="navbar-item">
+                  <Link to="/portfolio" className="navbar-item">
                     Portfolio
-                  </Link>                  
+                  </Link>
                 </div>
               </div>
-              <li className="navbar-item"><Link to="/process">Process</Link></li>
               <li className="navbar-item"><Link to="/services">Services</Link></li>
               <li className="navbar-item"><Link to="/contact">Contact</Link></li>
                 <div className="navbar-item">

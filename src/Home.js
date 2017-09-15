@@ -29,8 +29,7 @@ class Home extends Component {
           <img id="monster" src={monster} alt="monster"/>
         </div><br />
         <div id="alignCenter">
-          <h1 id="illustrationSub" className="title is-3">You're not going to let a bad website destroy you.</h1>
-          <h1 className="title is-3">Are you?</h1>
+          <h1 id="illustrationSub" className="title is-3">You're not going to let Goliath win. Are you?</h1>
         </div><br/>
         <div id="homeButton">
         <Link className="button is-primary is-outlined is-large" to="/services">View Services</Link>

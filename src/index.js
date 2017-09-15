@@ -5,15 +5,19 @@ import App from './App';
 import Blog from './Blog';
 import Post from './Post';
 import About from './About';
-import Process from './Process';
 import Services from './Services';
 import Contact from './Contact';
 import Home from './Home';
 import Experience from './Experience';
 import Mission from './Mission';
 import Curriculum from './Curriculum';
-import Launch from './Launch';
+import Portfolio from './Portfolio';
 import Msba from './Msba';
+import Smallproject from './Smallproject';
+import Mediumproject from './Mediumproject';
+import Largeproject from './Largeproject';
+import Webdomain from './Webdomain';
+import Logodesign from './Logodesign';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter, Route} from 'react-router-dom';
 
@@ -24,11 +28,14 @@ ReactDOM.render((
       <Route path="/blog" component={Blog}/>
       <Route path="/blog/post/:id/:title" component={Post}/>
       <Route path="/mission" component={Mission}/>
-      <Route path="/experience/msba" component={Msba}/>
-      <Route path="/experience/ca" component={Curriculum}/>
-      <Route path="/experience/launch_academy" component={Launch}/>
-      <Route path="/process" component={Process}/>
+      <Route path="/resume" component={Msba}/>
+      <Route path="/portfolio" component={Portfolio}/>
       <Route path="/services" component={Services}/>
+      <Route path="/small_project" component={Smallproject}/>
+      <Route path="/medium_project" component={Mediumproject}/>
+      <Route path="/large_project" component={Largeproject}/>
+      <Route path="/web_domain_setup" component={Webdomain}/>
+      <Route path="/logo_design" component={Logodesign}/>      
       <Route path="/contact" component={Contact}/>
     </div>
   </BrowserRouter>

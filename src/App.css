@@ -2,6 +2,33 @@ body {
   font-family: 'Lora', serif;
 }
 
+.valid {
+  border-color: #00d1b2 !important;
+}
+
+.amcharts-chart-div a {
+  display: none !important;
+}
+
+.panel-heading {
+  text-align: center !important;
+}
+
+.panel {
+  /*margin-bottom: 20px;*/
+}
+
+.panel {
+  margin-right: 50px;
+  margin-left: 50px;
+}
+
+.panel-heading, .panel-tabs, .panel-block {
+     /*border-bottom: none;
+     border-left: none;
+     border-right: none;*/
+}
+
 #alignCenter {
   text-align: center;
 }
@@ -125,8 +152,6 @@ left: -5000px;
 #experienceHeaders {
   color: black;
   text-align: center;
-  padding-bottom: 0px;
-  margin-bottom: 5px;
 }
 
 #experienceLogos {
@@ -226,8 +251,12 @@ left: -5000px;
 }
 
 .Msba {
+  /*background-image: url("images/paper.jpg");*/
+  box-shadow: 2px 2px 5px #888888;
+  opacity: 5%;
   border: .5px;
   border-style: solid;
+  border-bottom: none;
   margin-right: 15px;
   margin-left: 15px;
   padding-top: 20px;
@@ -242,4 +271,97 @@ left: -5000px;
 .Mission p {
   margin-left: 50px;
   margin-right: 50px;
+}
+
+/*Services.js*/
+table {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+thead {
+  background: #f8f8f8;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: left;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+td:first-of-type {
+  font-weight: 900;
+}
+
+@media screen and (max-width: 600px) {
+table {
+  border: 0;
+}
+table caption {
+  font-size: 1.3em;
+}
+table thead {
+  border: none;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  text-align: center;
+}
+
+td:first-of-type {
+  background: #f8f8f8;
+  font-weight: 900;
+}
+
+td:first-of-type:hover {
+  background: #f8f8f8;
+  font-weight: 900;
+  color: orange;
+}
+
+table tr {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  margin-bottom: .625em;
+}
+
+table td {
+  display: block;
+  font-size: .8em;
+}
+
+table td:before {
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+table a {
+  font-weight: 100;
+}
+
+
 }

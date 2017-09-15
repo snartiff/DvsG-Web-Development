@@ -2,20 +2,29 @@ import React, { Component } from 'react';
 import 'bulma/css/bulma.css';
 import {Link} from 'react-router-dom';
 import './font-awesome/css/font-awesome.min.css';
-
+import Smallproject from './Smallproject.js';
+import {getActiveTab} from './Helpers.js';
 
 class Services extends Component {
   constructor(props) {
   super(props);
   this.state = {
-    post: ""
+    tabName: null
   };
+  this.handleTabChange = this.handleTabChange.bind(this);
+}
+
+handleTabChange(e){
+  let activeTab = getActiveTab(e);
+  this.setState({
+    tabName: activeTab
+  })
 }
   render() {
     return (
       <div className="Services">
-        <h1 id="experienceHeaders" className="title is-2">Services</h1>
-        <table id="servicesTable" className="table is-striped">
+        <h1 id="experienceHeaders" className="title is-2">Services</h1><br />
+        <table id="servicesTable">
           <thead id="tableHeader" className="is-black">
             <tr>
               <th>Service</th>
@@ -25,38 +34,38 @@ class Services extends Component {
             </tr>
           </thead>
           <tbody>
+              <tr>
+                <td><Link className="servicesLink" to="/small_project">Web Development & Design - Small Project</Link></td>
+                <td>$40/hr</td>
+                <td>40 hours</td>
+                <td>$1600</td>
+              </tr>
             <tr>
-              <th>Web Development & Design - Small Project</th>
-              <td>$40</td>
-              <td>40</td>
-              <td>$1600</td>
-            </tr>
-            <tr>
-              <th>Web Development & Design - Medium Project</th>
-              <td>$40</td>
-              <td>80</td>
+              <td><Link className="servicesLink" to="/medium_project">Web Development & Design - Medium Project</Link></td>
+              <td>$40/hr</td>
+              <td>80 hours</td>
               <td>$3200</td>
             </tr>
             <tr>
-              <th>Web Development & Design - Large Project</th>
-              <td>$40</td>
-              <td>120+</td>
+              <td><Link className="servicesLink" to="/large_project">Web Development & Design - Large Project</Link></td>
+              <td>$40/hr</td>
+              <td>120 hours+</td>
               <td>$4800+</td>
             </tr>
             <tr>
-              <th>Web Domain Setup</th>
-              <td>$40</td>
-              <td>10</td>
+              <td><Link className="servicesLink" to="/web_domain_setup">Web Domain Setup</Link></td>
+              <td>$40/hr</td>
+              <td>10 hours</td>
               <td>$400</td>
             </tr>
             <tr>
-              <th>Logo Design - 3 concepts</th>
-              <td>$40</td>
-              <td>20</td>
+              <td><Link className="servicesLink" to="/web_domain_setup">Logo Design - 3 concepts</Link></td>
+              <td>$40/hr</td>
+              <td>20 hours</td>
               <td>$800</td>
             </tr>
           </tbody>
-        </table>
+        </table><br/>
         <div id="alignCenter">
           <p>Do you want a quote? Use the <Link to="/contact">contact</Link> form to get started.</p>
         </div>

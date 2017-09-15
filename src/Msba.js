@@ -14,9 +14,9 @@ class Msba extends Component {
     return (
       <div className="Msba">
         <div id="alignCenter">
-          <h1 className="title is-2">Resume</h1>
+          <h1 className="title is-2">Sean Nartiff's Resume</h1>
         </div><br />
-        <div id="alignCenter">
+      <div id="alignCenter">
           <h1 className="title is-4">Web Application Developer</h1>
           <h1 className="subtitle is-6">MSBA (July 2017 - present)</h1>
         </div><br />
@@ -24,8 +24,7 @@ class Msba extends Component {
         The MSBA is a non-profit organization that provides funding to Massachusetts
         public schools for various construction projects. At the MSBA, several web
         applications are used throughout different stages of a project's lifecycle.
-        I work on the front-end and back-end code of these applications with our small and
-        dedicated team.</p><br />
+        I work on the front-end and back-end code of these applications.</p><br />
         <div id="alignCenter">
           <h1 className="title is-4">Software Engineer</h1>
           <h1 className="subtitle is-6">Curriculum Associates (Nov. 2016 - June 2017)</h1>
