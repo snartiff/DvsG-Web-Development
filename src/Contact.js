@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css'
-import './font-awesome/css/font-awesome.min.css'
-
 
 class Contact extends Component {
   constructor(props) {
@@ -24,46 +21,45 @@ handleFieldChange(e) {
   let fieldValue = e.target.value;
   let fieldName = e.target.attributes.getNamedItem('name').value;
 
-  if ( fieldName == "name" ) {
+  if ( fieldName === "name" ) {
     this.setState({
       nameFieldValue: fieldValue
     })
     //Check if the Name Field has a value
-    fieldValue != "" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
+    fieldValue !== "" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
 
-  } else if ( fieldName == "_replyto" ) {
+  } else if ( fieldName === "_replyto" ) {
     this.setState({
       emailFieldValue: fieldValue
     })
     //Use email regex expression to check if the Email is valid
     let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let isValidEmail = fieldValue.match(emailRegExp);
-    isValidEmail != null ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
+    isValidEmail !== null ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
 
-  } else if (fieldName == "_subject") {
+  } else if (fieldName === "_subject") {
     this.setState({
       subjectValue: fieldValue
     })
     //Check if the Subject Field is not the default 'Choose Subject' value
-    fieldValue != "Choose Subject" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
+    fieldValue !== "Choose Subject" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
   } else {
     this.setState({
       messageFieldValue: fieldValue
     })
     //Check if the Message Field has a value
-    fieldValue != "" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
+    fieldValue !== "" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
   }
 
-    if (this.state.nameFieldValue != "" && this.state.emailFieldValue != "" && this.state.messageFieldValue != "" && (this.state.subjectValue != "Choose Subject" || this.state.subjectValue != "") ) {
+    if (this.state.nameFieldValue !== "" && this.state.emailFieldValue !== "" && this.state.messageFieldValue !== "" && (this.state.subjectValue !== "Choose Subject" || this.state.subjectValue !== "") ) {
       document.getElementById("submitButton").disabled = false;
     }
 }
 
 handleSubmit(e) {
-    if (this.state.nameFieldValue == "" || this.state.emailFieldValue == "" || this.state.messageFieldValue == "" || this.state.subjectValue == "Choose Subject") {
+    if (this.state.nameFieldValue === "" || this.state.emailFieldValue === "" || this.state.messageFieldValue === "" || this.state.subjectValue === "Choose Subject") {
       e.preventDefault();
       document.getElementById("submitButton").disabled = true;
-      console.log(this.state.subjectValue);
       window.alert("Please complete all of the fields before submitting the form. Thank you!")
     }
 }
@@ -78,13 +74,13 @@ handleSubmit(e) {
           <div className="field">
             <label className="label">Name</label>
             <div className="control">
-              <input className="input is-black" onChange={this.handleFieldChange} id="contactInput" type="text" placeholder="your name" type="text" name="name"></input><br></br>
+              <input className="input is-black" onChange={this.handleFieldChange} id="contactInput" type="text" type="text" name="name"></input><br></br>
             </div>
           </div>
           <div className="field">
             <label className="label">Email</label>
             <div className="control">
-              <input className="input is-black" onChange={this.handleFieldChange} id="contactInput" placeholder="your email" type="email" name="_replyto"></input><br></br>
+              <input className="input is-black" onChange={this.handleFieldChange} id="contactInput"  type="email" name="_replyto"></input><br></br>
             </div>
           </div>
           <div className="field">
@@ -92,8 +88,10 @@ handleSubmit(e) {
             <div className="select is-black">
               <select name="_subject" onChange={this.handleFieldChange}>
                 <option>Choose Subject</option>
-                <option>Get Quote</option>
-                <option>Report Bug</option>
+                <option>Web Development: Small Project ($2000)</option>
+                <option>Web Development: Medium Project ($4000)</option>
+                <option>Web Development: Large Project ($6000)</option>
+                <option>Logo Design: 3 Logos ($1000)</option>
                 <option>Other</option>
               </select>
             </div>
@@ -102,7 +100,7 @@ handleSubmit(e) {
           <div className="field">
             <label className="label">Message</label>
             <div className="control">
-              <textarea className="textarea is-black" onChange={this.handleFieldChange} id="contactInput" placeholder="your message" name="message"></textarea><br></br>
+              <textarea className="textarea is-black" onChange={this.handleFieldChange} id="contactInput" name="message"></textarea><br></br>
             </div>
           </div>
           <div className="field">

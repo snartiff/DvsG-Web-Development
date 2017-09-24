@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css';
-import './font-awesome/css/font-awesome.min.css';
-
 
 class ApprovalPanel extends Component {
   constructor(props) {
@@ -14,10 +11,10 @@ class ApprovalPanel extends Component {
       <div className="ApprovalPanel">
         <div className="panel" id="chartPanel">
           <div className="panel-heading">
-            Client Approval
+            Step #4: Client Approval (5 Hours)
           </div>
           <div className="panel-block">
-            <p>Fruitcake pudding dessert cupcake cheesecake dragée pudding bonbon. Ice cream cupcake jelly beans pastry cookie chupa chups macaroon cheesecake jelly-o. Marzipan pastry soufflé lollipop.</p>
+            <p>The last step in the process is your final approval. If you see anything that you want changed after we review the site together, I'll make these changes so that leave as a happy client.</p>
           </div>
         </div>
       </div>

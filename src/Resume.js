@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css'
-import './font-awesome/css/font-awesome.min.css'
-import msba_logo from './images/msba_logo_new.png'
 
-class Msba extends Component {
+class Resume extends Component {
   constructor(props) {
   super(props);
   this.state = {
@@ -14,17 +11,17 @@ class Msba extends Component {
     return (
       <div className="Msba">
         <div id="alignCenter">
-          <h1 className="title is-2">Sean Nartiff's Resume</h1>
+          <h1 className="title is-2">My Resume</h1>
         </div><br />
       <div id="alignCenter">
           <h1 className="title is-4">Web Application Developer</h1>
           <h1 className="subtitle is-6">MSBA (July 2017 - present)</h1>
         </div><br />
         <p>I currently work full-time as a Web Application Developer for the MSBA.
-        The MSBA is a non-profit organization that provides funding to Massachusetts
+        The MSBA is a government organization that provides funding to Massachusetts'
         public schools for various construction projects. At the MSBA, several web
         applications are used throughout different stages of a project's lifecycle.
-        I work on the front-end and back-end code of these applications.</p><br />
+        I work on the front-end and back-end code of these applications using jQuery, C#, and .NET.</p><br />
         <div id="alignCenter">
           <h1 className="title is-4">Software Engineer</h1>
           <h1 className="subtitle is-6">Curriculum Associates (Nov. 2016 - June 2017)</h1>
@@ -36,12 +33,12 @@ class Msba extends Component {
         <h1 className="title is-4">Ruby on Rails Apprentice</h1>
         <h1 className="subtitle is-6">Launch Academy (Aug. 2016 - Oct. 2017)</h1>
       </div><br />
-        <p>Ah, this marks the beginning of my journey into web development. This Boston-based coding bootcamp taught
-        me the fundamentals of programming and full-stack web development. I learned my first language, Ruby, and was introduced to React,
+    <p>This marks the beginning of my journey into web development. This Boston-based coding bootcamp taught
+        me the fundamentals of object-oriented programming and full-stack web development. I learned my first language, Ruby, and was introduced to React,
         one of the most popular front-end frameworks used today. By the end of Launch Academy, I was able to build my very first web application, Careerleon, from scratch.</p>
       </div>
     );
   }
 }
 
-export default Msba;
+export default Resume;

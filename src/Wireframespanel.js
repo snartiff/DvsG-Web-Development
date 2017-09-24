@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css';
-import './font-awesome/css/font-awesome.min.css';
-
 
 class WireframesPanel extends Component {
   constructor(props) {
@@ -14,10 +11,10 @@ class WireframesPanel extends Component {
       <div className="WireframesPanel">
         <div className="panel" id="chartPanel">
           <div className="panel-heading">
-            Wireframes
+            Step #2: Wireframes (6 hours)
           </div>
           <div className="panel-block">
-            <p>Halvah sweet roll gingerbread soufflé powder tiramisu fruitcake. Cheesecake cookie carrot cake pastry cotton candy. Pastry sugar plum marshmallow cupcake gummi bears jelly.</p>
+            <p>The second step involves creating wireframes based on your project outline. Your wireframes will be a visual representation of each page. I'll do a first draft, you'll have the opportunity to review the design, and then I'll do a revised final draft for you.</p>
           </div>
         </div>
       </div>

@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css'
-import './font-awesome/css/font-awesome.min.css'
 import Parser from 'html-react-parser';
-import Post from './Post.js';
 import {Link} from 'react-router-dom';
 import shortid from 'shortid';
-import launch from './images/launch.jpg'
 
 class Blog extends Component {
   constructor(props) {

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import 'bulma/css/bulma.css'
-import './font-awesome/css/font-awesome.min.css'
 import dvsg_logo from './images/dvsg_logo.svg'
 
 class Navigation extends Component {
@@ -12,7 +10,6 @@ class Navigation extends Component {
   };
 
   this.openLinkedIn = this.openLinkedIn.bind(this);
-  this.openFacebook = this.openFacebook.bind(this);
 }
 
 componentDidMount() {
@@ -41,10 +38,6 @@ openLinkedIn(pageName) {
     window.open('https://www.linkedin.com/in/seanmnartiff');
 }
 
-openFacebook(pageName) {
-    window.open('https://www.facebook.com');
-}
-
   render() {
     return (
       <div className="Navigation">
@@ -65,19 +58,7 @@ openFacebook(pageName) {
             <div className="navbar-start">
               <li className="navbar-item"><Link to="/blog">Blog</Link></li>
               <li className="navbar-item"><Link to="/mission">Mission</Link></li>
-              <div id="navDropdown" className="navbar-item has-dropdown is-hoverable">
-                <a className="navbar-link">
-                  Experience
-                </a>
-                <div className="navbar-dropdown">
-                  <Link to="/resume" className="navbar-item">
-                    Resume
-                  </Link>
-                  <Link to="/portfolio" className="navbar-item">
-                    Portfolio
-                  </Link>
-                </div>
-              </div>
+              <li className="navbar-item"><Link to="/resume">Resume</Link></li>
               <li className="navbar-item"><Link to="/services">Services</Link></li>
               <li className="navbar-item"><Link to="/contact">Contact</Link></li>
                 <div className="navbar-item">
@@ -85,15 +66,6 @@ openFacebook(pageName) {
                       <a className="button is-small is-warning is-outlined">
                           <span className="icon">
                             <i className="fa fa-linkedin" onClick={this.openLinkedIn}></i>
-                          </span>
-                      </a>
-                  </div>
-                </div>
-                <div className="navbar-item">
-                  <div className="navbar-menu">
-                      <a className="button is-small is-info is-outlined">
-                          <span className="icon">
-                            <i className="fa fa-facebook" onClick={this.openFacebook}></i>
                           </span>
                       </a>
                   </div>

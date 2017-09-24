@@ -2,6 +2,10 @@ body {
   font-family: 'Lora', serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .valid {
   border-color: #00d1b2 !important;
   border-width: 2px !important;
@@ -230,6 +234,15 @@ left: -5000px;
   }
 }
 
+@media (max-width: 768px) {
+  .panel-heading {
+    font-size: 14px !important;
+  }
+
+  .panel-block {
+    font-size: 12px !important;
+  }
+}
 
 #missionTitle {
   text-align: center;

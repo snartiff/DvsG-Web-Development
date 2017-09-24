@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css';
-import './font-awesome/css/font-awesome.min.css';
-
+import {getCurrentUrl} from './Helpers.js';
 
 class WebDevPanel extends Component {
   constructor(props) {
@@ -10,14 +8,29 @@ class WebDevPanel extends Component {
   };
 }
   render() {
+    let panelTitle = "";
+    let isSmallProject = getCurrentUrl("small_project");
+    let isMediumProject = getCurrentUrl("medium_project");
+    let isLargeProject = getCurrentUrl("large_project");
+
+    if ( isSmallProject > -1 ) {
+      panelTitle = "Step #3: Web Development (25 Hours)";
+    } else if ( isMediumProject > -1 ) {
+      panelTitle = "Step #3: Web Development (65 Hours)";
+    } else if ( isLargeProject > -1 ) {
+      panelTitle = "Step #3: Web Development (105 Hours)";
+    } else {
+      panelTitle = "";
+    }
+
     return (
       <div className="WebDevPanel">
         <div className="panel" id="chartPanel">
           <div className="panel-heading">
-            Website Development
+            {panelTitle}
           </div>
           <div className="panel-block">
-            <p>Jelly-o jelly-o carrot cake lemon drops apple pie. Macaroon ice cream fruitcake tiramisu tart oat cake jelly tart pudding. Pastry sweet roll tiramisu ice cream sugar plum soufflé chocolate cake. Marshmallow soufflé bonbon chocolate sweet roll.</p>
+            <p>The third step will be coding and launching your website. I'll make sure your site looks great on both mobile and desktop devices, so don't worry! A free Heroku domain will be provided. If you want a unique domain name, you must pay for the domain name and for additional setup costs.</p>
           </div>
         </div>
       </div>

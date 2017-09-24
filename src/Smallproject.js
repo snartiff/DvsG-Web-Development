@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css';
-import './font-awesome/css/font-awesome.min.css';
 import AmCharts from "@amcharts/amcharts3-react";
 import Smalldescription from "./Smalldescription";
 import WireframesPanel from "./Wireframespanel";
 import WebDevPanel from "./Webdevpanel";
 import ApprovalPanel from "./Approvalpanel";
-
-let slice = null;
 
 class Smallproject extends Component {
   constructor(props) {
@@ -27,8 +23,7 @@ handleRender(e) {
     sliceValue: value
   })
 
-  if ( document.getElementById("chartPanel").firstChild != null && document.getElementById("chartPanel").firstChild != undefined   ) {
-    let $chartPanel = document.getElementById("chartPanel").firstChild;
+  if ( document.getElementById("chartPanel").firstChild !== null && document.getElementById("chartPanel").firstChild !== undefined   ) {
     document.getElementById("chartPanel").firstChild.style.backgroundColor = sliceColor;
     document.getElementById("chartPanel").firstChild.style.color = 'white';
     document.getElementById("chartPanel").firstChild.style.fontWeight = 900;
@@ -52,6 +47,8 @@ handleRender(e) {
       case 5:
           description = <ApprovalPanel />;;
           break;
+      default:
+        description = null;
     }
 
     const config = {

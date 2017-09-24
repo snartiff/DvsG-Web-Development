@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css';
-import './font-awesome/css/font-awesome.min.css';
-
 
 class Smalldescription extends Component {
   constructor(props) {
@@ -9,15 +6,17 @@ class Smalldescription extends Component {
   this.state = {
   };
 }
+
   render() {
+
     return (
       <div className="Smalldescription">
         <div className="panel" id="chartPanel">
           <div className="panel-heading">
-            Project Outline
+            Step #1: Project Outline (2 Hours)
           </div>
           <div className="panel-block">
-            <p>Lorem ipsum dolor sit amet, no justo deseruisse mei, mea mazim accumsan vituperatoribus ei. Habeo justo fastidii cu usu. Eum etiam paulo evertitur id, eum prodesset adipiscing an. Et quo nostro vituperata dissentiunt, ut qui prompta convenire maluisset.</p>
+            <p>The first step is meeting with you in-person or via Skype to discuss your website. During our initial meeting, we will complete an outline describing in detail the contents and functionality of each individual page. We will work together to establish project expectations and requirements.</p>
           </div>
         </div>
       </div>
