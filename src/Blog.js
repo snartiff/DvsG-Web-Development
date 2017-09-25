@@ -16,7 +16,7 @@ handleTags(tagsString) {
   let tagsArray = tagsString.split(',');
 
   for (let tag of tagsArray) {
-    tags.push(<li key={shortid.generate()} className="tag is-light is-rounded">{tag}</li>)
+    tags.push(<li key={shortid.generate()} className="tag is-primary is-rounded">{tag}</li>)
   }
 
   return tags
@@ -27,7 +27,7 @@ handleTags(tagsString) {
       return (
         <div className="Blog">
           <div id="alignCenter">
-            <h1 id="blogTitle" className="title is-2">Blog</h1>
+            <h1 id="blogTitle" className="title is-2">Code and Conquer</h1>
           </div>
             {this.props.posts.map( (post, index) =>
               <div key={post.id}>
@@ -39,7 +39,7 @@ handleTags(tagsString) {
                       </figure>
                     </div>
                     <p className="card-header-title" id="blogHeader">
-                      <Link to={"/blog/post/" + post.id + "/" + post.title.rendered}>{ Parser(post.title.rendered) }</Link>
+                      <Link to={"/code_and_conquer/post/" + post.id + "/" + post.title.rendered}>{ Parser(post.title.rendered) }</Link>
                       <span id="date"><span id="whiteSpace">...</span>{post.acf.datepublished}</span>
                     </p><br/><br/>
                       <div className="card-footer-item">

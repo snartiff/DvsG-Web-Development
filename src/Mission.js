@@ -14,23 +14,36 @@ class Mission extends Component {
       <div className="Mission">
         <div id="alignCenter">
           <h1 className="title is-2">Mission</h1>
+          <h3 className="subtitle is-6">What You Should Expect</h3>
         </div><br/>
+      <h2 className="subtitle is-5">
+        1.) Set and Achieve Goals
+      </h2>
+      <p>
+        We'll create an outline of your website and decide what the goal of your site truly is. Once we establish a goal, we'll discuss your call-to-action and what we can do to best accomplish your goal online.
+        Part of this process is establishing realistic expectations and minimum project requirements.
+      </p><br/>
+      <h2 className="subtitle is-5">
+        2.) Mobile-First Design
+      </h2>
         <p>
-          What Can We Accomplish Together? My sole purpose as your web developer and designer is to take your
-          dreams and make them a reality. DvsG (David vs Goliath) is dedicated to
-          helping small businesses and individuals be successful. How can I help you
-          be successful?
+          I'll help you succeed by using mobile-first design. Your site will look great on both a cell phone
+          and a desktop computer. I will leverage proven CSS styling frameworks and test your site on several different-sized
+          devices.
         </p><br />
+      <h2 className="subtitle is-5">
+          3.) Consistent Brand Image
+      </h2>
         <p>
-          I'll help you succeed by taking a modern day approach to web development. This means a few things:
-           mobile-first design and speed. Your site will look just as sharp on a cell phone
-           as it does on a desktop computer and it'll load quickly.
+            Together, we'll stablish a unique brand image online and maintain this image throughout your website.
+            Your website will be built and designed with your target market in mind.
         </p><br />
-        <p>
-          In addition, I'll focus on maintaining your brand. This is an essential part of your success. I want your site
-          to be a true reflection of what you and your brand stand for. Your website will be built
-          and designed with your target market in mind.
-        </p>
+      <h2 className="subtitle is-5">
+          4.) Flexibility
+      </h2>
+      <p>
+          I'll do my absolute best to adjust according to your needs. If you need to reschedule one of our meetings, change a feature, or need a flexible payment option, I'll work with you to alleviate your concerns.
+      </p>
       </div>
     );
   }

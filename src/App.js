@@ -32,7 +32,7 @@ componentDidMount() {
     let blogPage = null;
 
     homePage = this.props.location.pathname === "/" ? <Home /> : null;
-    blogPage = this.props.location.pathname === "/blog" ? <Blog posts={this.state.posts} comments={this.state.comments} /> : null;
+    blogPage = this.props.location.pathname === "/code_and_conquer" ? <Blog posts={this.state.posts} /> : null;
 
     return (
       <div className="App">

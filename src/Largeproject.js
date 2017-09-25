@@ -41,7 +41,7 @@ handleRender(e) {
       case 6:
           description = <WireframesPanel />;
           break;
-      case 25:
+      case 105:
           description = <WebDevPanel />;
           break;
       case 5:
@@ -68,7 +68,7 @@ handleRender(e) {
      },
      {
        "title": "Website Development",
-       "value": 25
+       "value": 105
      },
      {
        "title": "Client Approval",
