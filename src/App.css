@@ -96,9 +96,30 @@ body {
   margin-right: 50px;
 }
 
+/*#Post {
+  text-align: center;
+  margin: auto !important;
+}*/
+
 #postContent {
   margin-left: 50px;
   margin-right: 50px;
+}
+
+#image {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#socialButtons {
+  margin-left: 10px;
+  position: absolute;
+  width: 40px !important;
+}
+
+#postContent p {
+  margin-bottom: 20px;
 }
 
 footer {
@@ -155,7 +176,7 @@ left: -5000px;
   margin-top: 20px;
   margin-left: 50px;
   margin-right: 50px;
-  padding: 0;
+  padding-left: 5px;
 }
 
 #blogEmail {
