@@ -32,7 +32,7 @@ class Home extends Component {
           <h1 id="illustrationSub" className="title is-3">You're not going to let Goliath win. Are you?</h1>
         </div><br/>
         <div id="homeButton">
-        <Link className="button is-primary is-outlined is-large" to="/services">View Services</Link>
+        <Link className="button is-primary is-large" to="/services">View Services</Link>
         </div>
       </div>
     );

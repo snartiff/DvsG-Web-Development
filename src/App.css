@@ -1,15 +1,153 @@
 body {
   font-family: 'Lora', serif;
 }
+/*Responsive CSS*/
+@media (min-width: 1008px) {
+  #image {
+    text-align: center;
+    margin: auto;
+    width: 600px;
+    margin-top: 10px;
+  }
+  .caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1007px) {
+  #image {
+    text-align: center;
+    margin: auto;
+    width: 450px;
+    margin-top: 10px;
+  }
+  .caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 12px;
+  }
+  .navbar-link {
+    padding-right: 0px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .panel-heading {
+    font-size: 14px !important;
+  }
+
+  .panel-block {
+    font-size: 12px !important;
+  }
+
+  #illustrationSub {
+    font-size: 18px;
+  }
+
+  #image {
+    text-align: center;
+    margin: auto;
+    width: 300px;
+    margin-top: 10px;
+  }
+
+  .caption {
+    text-align: center;
+    font-style: italic;
+    font-size: 10px;
+  }
+
+  #homeButton .button {
+    width: 150px;
+    height: 30px;
+  }
+
+  #homeButton a {
+    font-size: 14px !important;
+  }
+
+  table {
+    border: 0;
+  }
+  table caption {
+    font-size: 1.3em;
+  }
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    text-align: center;
+  }
+
+  td:first-of-type {
+    background: #f8f8f8;
+    font-weight: 900;
+  }
+
+  td:first-of-type:hover {
+    background: #f8f8f8;
+    font-weight: 900;
+    color: orange;
+  }
+
+  table tr {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    display: block;
+    font-size: .8em;
+  }
+
+  table td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table a {
+    font-weight: 100;
+  }
+
+}
+/*End of Responsive Css*/
 
 .active {
   color: #00d1b2 !important;
   border-style: solid !important;
-  border-width: 1.5px !important;
+  border-width: 1px !important;
   border-right: none !important;
   border-top: none !important;
   border-left: none !important;
   border-bottom-color: #00d1b2 !important;
+}
+
+.asteric {
+  color: #00d1b2;
+}
+
+.is-aqua {
+  color: #00d1b2;
+}
+
+.Contact h1 {
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.Contact h2 {
+  padding-top: 0px !important;
+  margin-top: 0px !important;
 }
 
 .tag {
@@ -23,6 +161,11 @@ body {
 .Msba .panel ul {
   margin: auto;
   list-style-type: circle;
+}
+
+.Msba h2 {
+  margin-bottom: 0px !important;
+  padding-bottom: 0px !important;
 }
 
 .hidden {
@@ -43,19 +186,10 @@ body {
 }
 
 .panel {
-  /*margin-bottom: 20px;*/
-}
-
-.panel {
   margin-right: 50px;
   margin-left: 50px;
 }
 
-.panel-heading, .panel-tabs, .panel-block {
-     /*border-bottom: none;
-     border-left: none;
-     border-right: none;*/
-}
 
 #alignCenter {
   text-align: center;
@@ -65,8 +199,9 @@ body {
   box-shadow:none !important;
  }
 
-.navbar-burger.is-active {
-  /*color: black !important;*/
+.thumbDiv img {
+  height: 64px;
+  width: 64px;
 }
 
 #thumb {
@@ -96,20 +231,9 @@ body {
   margin-right: 50px;
 }
 
-/*#Post {
-  text-align: center;
-  margin: auto !important;
-}*/
-
 #postContent {
   margin-left: 50px;
   margin-right: 50px;
-}
-
-#image {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 #socialButtons {
@@ -274,22 +398,6 @@ left: -5000px;
   text-align: center;
 }
 
-@media (max-width: 1000px) {
-  .navbar-link {
-    padding-right: 0px !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .panel-heading {
-    font-size: 14px !important;
-  }
-
-  .panel-block {
-    font-size: 12px !important;
-  }
-}
-
 #missionTitle {
   text-align: center;
   color: #00d1b2;
@@ -375,59 +483,4 @@ table th {
 
 td:first-of-type {
   font-weight: 900;
-}
-
-@media screen and (max-width: 600px) {
-table {
-  border: 0;
-}
-table caption {
-  font-size: 1.3em;
-}
-table thead {
-  border: none;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  text-align: center;
-}
-
-td:first-of-type {
-  background: #f8f8f8;
-  font-weight: 900;
-}
-
-td:first-of-type:hover {
-  background: #f8f8f8;
-  font-weight: 900;
-  color: orange;
-}
-
-table tr {
-  border-bottom: 1px solid #ddd;
-  display: block;
-  margin-bottom: .625em;
-}
-
-table td {
-  display: block;
-  font-size: .8em;
-}
-
-table td:before {
-  content: attr(data-label);
-  float: left;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-table a {
-  font-weight: 100;
-}
-
-
 }

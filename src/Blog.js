@@ -33,7 +33,7 @@ handleTags(tagsString) {
               <div key={post.id}>
                 <div id="postCart" className="card">
                   <header className="card-header">
-                    <div>
+                    <div className="thumbDiv">
                       <figure id="thumb" className="image is-64x64">
                         <img id="blogThumb" src={post.acf.image.url}></img>
                       </figure>

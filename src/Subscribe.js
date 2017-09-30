@@ -4,20 +4,26 @@ class Subscribe extends Component {
   constructor(props) {
   super(props);
   this.state = {
+    isValidEmail: false
   };
+  this.handleFieldChange = this.handleFieldChange.bind(this)
+}
+
+componentDidMount() {
+  document.getElementById("mc-embedded-subscribe").disabled = true;
 }
 
 handleFieldChange(e) {
   let fieldValue = e.target.value;
   let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  let isValidEmail = fieldValue.match(emailRegExp);
-
-    //Check if the value entered is an email and add valid class if valid email
-    if ( isValidEmail != null ) {
-      // document.getElementById("mc-embedded-subscribe").disabled = false;
-      e.currentTarget.classList.add('valid')
+  let isValid = fieldValue.match(emailRegExp);
+    this.setState({
+      isValidEmail: isValid
+    })
+    if (isValid) {
+      document.getElementById("mc-embedded-subscribe").disabled = false;
     } else {
-      e.currentTarget.classList.remove('valid');
+      document.getElementById("mc-embedded-subscribe").disabled = true;
     }
 }
 
@@ -30,7 +36,7 @@ handleFieldChange(e) {
                 <div id="mc_embed_signup_scroll">
                   <div className="mc-field-group">
                     <p id="emailHeader">Want to hear more? Subscribe to my email list.</p>
-                    <input name="EMAIL" type="email" onKeyUp={this.handleFieldChange} className="required email input is-black" id="mce-EMAIL"></input>
+                    <input name="EMAIL" type="email" onChange={this.handleFieldChange} className="required email input is-black" id="mce-EMAIL"></input>
                   </div>
                     <div id="mce-responses" className="clear">
                       <div className="response" id="mce-error-response"></div>
@@ -40,7 +46,7 @@ handleFieldChange(e) {
                         <input type="text" name="b_04d6d69ccd0cbe911bc608528_c2cad7d15d" tabIndex="-1" value=""></input>
                       </div>
                       <div className="clear">
-                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button is-primary is-outlined"></input>
+                        <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" onChange={this.handleFieldChange} className={this.state.isValidEmail ? "button is-primary" : "button is-primary is-outlined"}></input>
                       </div>
                   </div>
                 </form>

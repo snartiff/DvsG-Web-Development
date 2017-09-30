@@ -6,8 +6,11 @@ class Contact extends Component {
   this.state = {
     subjectValue: "",
     nameFieldValue: "Choose Subject",
+    messageFieldValue: "",
     emailFieldValue: "",
-    messageFieldValue: ""
+    isValidEmail: false,
+    emailIsSent: false,
+    areValid: false
   };
   this.handleFieldChange = this.handleFieldChange.bind(this);
   this.handleSubmit = this.handleSubmit.bind(this);
@@ -36,6 +39,15 @@ handleFieldChange(e) {
     let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let isValidEmail = fieldValue.match(emailRegExp);
     isValidEmail !== null ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
+    if (isValidEmail) {
+      this.setState({
+        isValidEmail: true
+      })
+    } else {
+      this.setState({
+        isValidEmail: false
+      })
+    }
 
   } else if (fieldName === "_subject") {
     this.setState({
@@ -51,40 +63,55 @@ handleFieldChange(e) {
     fieldValue !== "" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
   }
 
-    if (this.state.nameFieldValue !== "" && this.state.emailFieldValue !== "" && this.state.messageFieldValue !== "" && (this.state.subjectValue !== "Choose Subject" || this.state.subjectValue !== "") ) {
+    if (this.state.nameFieldValue !== "" && this.state.isValidEmail !== false && this.state.messageFieldValue !== "" && (this.state.subjectValue !== "Choose Subject" || this.state.subjectValue !== "") ) {
       document.getElementById("submitButton").disabled = false;
+      this.setState({
+        areValid: true
+      })
     }
 }
 
 handleSubmit(e) {
-    if (this.state.nameFieldValue === "" || this.state.emailFieldValue === "" || this.state.messageFieldValue === "" || this.state.subjectValue === "Choose Subject") {
+    if (this.state.nameFieldValue === "" || this.state.isValidEmail === false || this.state.messageFieldValue === "" || this.state.subjectValue === "Choose Subject") {
       e.preventDefault();
       document.getElementById("submitButton").disabled = true;
-      window.alert("Please complete all of the fields before submitting the form. Thank you!")
+
+    } else {
+      this.setState({
+        emailIsSent: true
+      })
     }
 }
 
   render() {
+    let infoMessage = null;
+    if (this.state.isValidEmail && this.state.emailIsSent) {
+      infoMessage = "Thank you for sending a message!"
+    } else {
+      infoMessage = "Please complete all fields"
+    }
+
     return (
       <div className="Contact">
         <div id="alignCenter">
           <h1 className="title is-2">Contact</h1>
+          <h2 className={this.state.emailIsSent ? "subtitle is-6 is-aqua" : "subtitle is-6"}>{infoMessage}</h2>
         </div><br />
         <form action="https://formspree.io/dvsgweb@gmail.com" method="POST">
           <div className="field">
-            <label className="label">Name</label>
+            <label className="label"><span className="asteric">*</span> Name</label>
             <div className="control">
               <input className="input is-black" onChange={this.handleFieldChange} id="contactInput" type="text" type="text" name="name"></input><br></br>
             </div>
           </div>
           <div className="field">
-            <label className="label">Email</label>
+            <label className="label"><span className="asteric">*</span> Email</label>
             <div className="control">
               <input className="input is-black" onChange={this.handleFieldChange} id="contactInput"  type="email" name="_replyto"></input><br></br>
             </div>
           </div>
           <div className="field">
-            <label className="label">Subject</label>
+            <label className="label"><span className="asteric">*</span> Subject</label>
             <div className="select is-black">
               <select name="_subject" onChange={this.handleFieldChange}>
                 <option>Choose Subject</option>
@@ -98,13 +125,13 @@ handleSubmit(e) {
           </div>
 
           <div className="field">
-            <label className="label">Message</label>
+            <label className="label"><span className="asteric">*</span> Message</label>
             <div className="control">
               <textarea className="textarea is-black" onChange={this.handleFieldChange} id="contactInput" name="message"></textarea><br></br>
             </div>
           </div>
           <div className="field">
-            <input className="button is-primary is-outlined is-medium" onClick={this.handleSubmit} id="submitButton" type="submit" value="Send"></input>
+            <input className={this.state.areValid ? "button is-primary is-medium" : "button is-primary is-medium is-outlined"} onClick={this.handleSubmit} id="submitButton" type="submit" value="Send"></input>
           </div>
           <input type="hidden" name="_next" value="//localhost:3000/contact" />
         </form>

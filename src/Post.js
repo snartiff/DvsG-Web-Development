@@ -5,18 +5,11 @@ import axios from 'axios';
 import { ShareButtons, ShareCounts, generateShareIcon } from 'react-share';
 
 const {
-  FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
   EmailShareButton,
 } = ShareButtons;
 
-const {
-  FacebookShareCount,
-  LinkedinShareCount,
-} = ShareCounts;
-
-const FacebookIcon = generateShareIcon('facebook');
 const TwitterIcon = generateShareIcon('twitter');
 const LinkedinIcon = generateShareIcon('linkedin');
 const EmailIcon = generateShareIcon('email');
@@ -52,8 +45,9 @@ getCurrentPost() {
   let postId = Number(currentPathArray[currentPathArrayLength - 2]);
   let curPost = null;
   let postTitle = null;
-  let postSummary = "";
   let post = null;
+  let image = null;
+  let caption = null;
   let postArray = [];
 
   //Find the correct post by matching the id from the URL with the ids from the array of posts
@@ -65,10 +59,11 @@ getCurrentPost() {
     }
     postTitle = <h1 id="postTitle" className="title is-2">{Parser(curPost.title.rendered)}</h1>
     post = <div id="postContent">{ Parser( curPost.content.rendered ) }</div>
-    postSummary = curPost.acf.summary;
-    postArray.push(postTitle, post, postSummary);
+    image = <img src={curPost.acf.image.url}></img>
+    caption = <p className="caption">{curPost.acf.caption}</p>
+    postArray.push(postTitle, post, image, caption);
   } else {
-    postArray.push(postTitle, post, postSummary);
+    postArray.push(postTitle, post, image, caption);
 }
   return postArray;
 }
@@ -83,22 +78,16 @@ appendDisqus() {
 }
 
 componentDidMount() {
-  //Retrieve blog posts from the WordPress API
-  // <FacebookShareButton
-  //     url={url}
-  //     className="Demo__some-network__share-button">
-  //     <FacebookIcon
-  //       size={32}
-  //       round />
-  // </FacebookShareButton>
   this.getPosts();
 }
 
   render() {
     let url = window.location.href;
     let postArray = this.getCurrentPost();
-    let postTitle = postArray[0];
+    let title = postArray[0];
     let post = postArray[1];
+    let image = postArray[2];
+    let caption = postArray[3];
     let disqusDiv = document.getElementById('disqus_thread');
     if (this.state.posts.length !== 0) {
       this.appendDisqus();
@@ -107,7 +96,13 @@ componentDidMount() {
       return (
         <div className="Post">
           <div>
-            {postTitle}
+            {title}
+          </div>
+          <div id="image">
+            {image}
+          </div>
+          <div>
+            {caption}
           </div>
           <div>
             {post}
@@ -115,7 +110,7 @@ componentDidMount() {
           <div id="socialButtons">
             <LinkedinShareButton
                 url={url}
-                quote={postTitle.props.children}
+                quote={title.props.children}
                 className="Demo__some-network__share-button">
                 <LinkedinIcon
                   size={32}
@@ -123,7 +118,7 @@ componentDidMount() {
               </LinkedinShareButton>
             <TwitterShareButton
               url={url}
-              title={postTitle.props.children}
+              title={title.props.children}
               className="Demo__some-network__share-button">
               <TwitterIcon
                 size={32}
@@ -131,14 +126,13 @@ componentDidMount() {
             </TwitterShareButton>
             <EmailShareButton
               url={url}
-              subject={postTitle.props.children}
+              subject={title.props.children}
               body="Here is an interesting post from Code and Conquer I thought you'd like to read."
               className="Demo__some-network__share-button">
               <EmailIcon
                 size={32}
                 round />
             </EmailShareButton>
-
           </div>
           <div>
             <Subscribe />
