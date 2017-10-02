@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import Subscribe from './Subscribe.js';
 import Parser from 'html-react-parser';
 import axios from 'axios';
@@ -18,11 +19,12 @@ class Post extends Component {
   constructor(props) {
   super(props);
   this.state = {
-    posts: []
+    posts: null,
+    currentPost: null
   };
   this.getPosts = this.getPosts.bind(this);
   this.appendDisqus = this.appendDisqus.bind(this);
-  this.getCurrentPost = this.getCurrentPost.bind(this);
+  this.openPhotoUrl = this.openPhotoUrl.bind(this);
 }
 
 getPosts() {
@@ -31,41 +33,34 @@ getPosts() {
       this.setState({
         posts: response.data
       })
+
+      let currentPath = window.location.href;
+      let currentPathArray = currentPath.split("/");
+      let currentPathArrayLength = currentPathArray.length;
+      let postId = Number(currentPathArray[currentPathArrayLength - 2]);
+      let curPost = null;
+
+      for (let post of response.data) {
+        if (post.id === postId) {
+          curPost = post;
+          this.setState({
+            currentPost: curPost
+          })
+        }
+      }
+
     })
     .catch( (error) => {
       console.log(error);
     });
 }
 
-getCurrentPost() {
-  //Retrieve the post id from the URL
-  let currentPath = window.location.href;
-  let currentPathArray = currentPath.split("/");
-  let currentPathArrayLength = currentPathArray.length;
-  let postId = Number(currentPathArray[currentPathArrayLength - 2]);
-  let curPost = null;
-  let postTitle = null;
-  let post = null;
-  let image = null;
-  let caption = null;
-  let postArray = [];
-
-  //Find the correct post by matching the id from the URL with the ids from the array of posts
-  if (this.state.posts.length !== 0) {
-    for (let post of this.state.posts) {
-      if (post.id === postId) {
-        curPost = post;
-      }
-    }
-    postTitle = <h1 id="postTitle" className="title is-2">{Parser(curPost.title.rendered)}</h1>
-    post = <div id="postContent">{ Parser( curPost.content.rendered ) }</div>
-    image = <img src={curPost.acf.image.url}></img>
-    caption = <p className="caption">{curPost.acf.caption}</p>
-    postArray.push(postTitle, post, image, caption);
-  } else {
-    postArray.push(postTitle, post, image, caption);
+openPhotoUrl() {
+  window.open(this.state.currentPost.acf.photobyurl);
 }
-  return postArray;
+
+componentDidMount() {
+  this.getPosts();
 }
 
 appendDisqus() {
@@ -77,40 +72,36 @@ appendDisqus() {
   (d.head || d.body).appendChild(s);
 }
 
-componentDidMount() {
-  this.getPosts();
-}
-
   render() {
     let url = window.location.href;
-    let postArray = this.getCurrentPost();
-    let title = postArray[0];
-    let post = postArray[1];
-    let image = postArray[2];
-    let caption = postArray[3];
     let disqusDiv = document.getElementById('disqus_thread');
-    if (this.state.posts.length !== 0) {
+
+    if (this.state.posts !== null && this.state.currentPost !== null ) {
       this.appendDisqus();
     }
-    if (this.state.posts.length !== 0 ) {
+
+    if (this.state.posts !== null && this.state.currentPost !== null ) {
       return (
         <div className="Post">
           <div>
-            {title}
+            <h1 id="postTitle" className="title is-2">{Parser(this.state.currentPost.title.rendered)}</h1>
           </div>
           <div id="image">
-            {image}
+            <img src={this.state.currentPost.acf.image.url}></img>
           </div>
-          <div>
-            {caption}
+          <div className="captionDiv">
+            <p className="caption">
+              <a onClick={this.openPhotoUrl}>photo credit: {this.state.currentPost.acf.caption}</a>
+            </p>
           </div>
-          <div>
-            {post}
+          <div className="paragraphs">
+            <div id="postContent">
+              { Parser(this.state.currentPost.content.rendered) }
+            </div>
           </div>
           <div id="socialButtons">
             <LinkedinShareButton
                 url={url}
-                quote={title.props.children}
                 className="Demo__some-network__share-button">
                 <LinkedinIcon
                   size={32}
@@ -118,7 +109,6 @@ componentDidMount() {
               </LinkedinShareButton>
             <TwitterShareButton
               url={url}
-              title={title.props.children}
               className="Demo__some-network__share-button">
               <TwitterIcon
                 size={32}
@@ -126,7 +116,6 @@ componentDidMount() {
             </TwitterShareButton>
             <EmailShareButton
               url={url}
-              subject={title.props.children}
               body="Here is an interesting post from Code and Conquer I thought you'd like to read."
               className="Demo__some-network__share-button">
               <EmailIcon

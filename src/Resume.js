@@ -16,7 +16,7 @@ class Resume extends Component {
         </div><br />
       <div id="alignCenter">
           <h1 className="title is-4">Web Application Developer</h1>
-          <h1 className="subtitle is-6">MSBA (July 2017 - present)</h1>
+          <h6 className="subtitle is-6">MSBA (July 2017 - present)</h6>
         </div><br />
       <p>I currently work full-time as a Web Application Developer for the Massachusetts School Building Authority.
         The MSBA is a government organization that provides funding to Massachusetts'
@@ -40,18 +40,6 @@ class Resume extends Component {
       <div id="panels">
         <div className="panel">
           <div className="panel-heading">
-            <p className="resumePanel">Design Skills</p>
-          </div>
-          <div className="panel-block">
-            <ul>
-              <li>Illustrator</li>
-              <li>InDesign</li>
-              <li>Photoshop</li>
-            </ul>
-          </div>
-        </div>
-        <div className="panel">
-          <div className="panel-heading">
             <p className="resumePanel">Coding Skills</p>
           </div>
           <div className="panel-block">
@@ -65,8 +53,31 @@ class Resume extends Component {
             </ul>
           </div>
         </div>
+        <div className="panel">
+          <div className="panel-heading">
+            <p className="resumePanel">Design Skills</p>
+          </div>
+          <div className="panel-block">
+            <ul>
+              <li>Illustrator</li>
+              <li>InDesign</li>
+              <li>Photoshop</li>
+            </ul>
+          </div>
+        </div>
+        <div className="panel">
+          <div className="panel-heading">
+            <p className="resumePanel">Education</p>
+          </div>
+          <div className="panel-block">
+            <ul>
+              <li>Launch Academy: Full-Stack Web-Development</li>
+              <li>Plymouth State University: M.Ed, Language Education</li>
+              <li>Temple University: BA, Advertising</li>
+            </ul>
+          </div>
+        </div>
       </div>
-
     </div>
     );
   }
