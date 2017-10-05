@@ -40,12 +40,6 @@ class Services extends Component {
               <td>120 hours+</td>
               <td>$6000+</td>
             </tr>
-            <tr>
-              <td><Link className="servicesLink" to="/web_domain_setup">Logo Design - 3 concepts</Link></td>
-              <td>$50/hr</td>
-              <td>20 hours</td>
-              <td>$1000</td>
-            </tr>
           </tbody>
         </table><br/>
         <div id="alignCenter">

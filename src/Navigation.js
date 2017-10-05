@@ -90,16 +90,11 @@ openTwitter(pageName) {
                     </span>
                 </a>
                 <span id="whiteSpace">.......</span>
-                <div id="twitter">
                   <a className="button is-small is-outlined">
                       <span className="icon">
                         <i className="fa fa-twitter is-light-blue" onClick={this.openTwitter}></i>
                       </span>
                   </a>
-                </div>
-              </div>
-              <div className="navbar-item">
-
               </div>
             </div>
             <div className="navbar-end">

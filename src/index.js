@@ -14,7 +14,6 @@ import Resume from './Resume';
 import Smallproject from './Smallproject';
 import Mediumproject from './Mediumproject';
 import Largeproject from './Largeproject';
-import Logodesign from './Logodesign';
 import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter, Route} from 'react-router-dom';
 
@@ -32,7 +31,6 @@ ReactDOM.render((
       <Route path="/small_project" component={Smallproject}/>
       <Route path="/medium_project" component={Mediumproject}/>
       <Route path="/large_project" component={Largeproject}/>
-      <Route path="/logo_design" component={Logodesign}/>
       <Route path="/contact" component={Contact}/>
     </div>
   </BrowserRouter>
