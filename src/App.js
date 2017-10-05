@@ -4,7 +4,6 @@ import './App.css';
 import './font-awesome/css/font-awesome.min.css'
 import Navigation from './Navigation.js';
 import Home from './Home.js';
-import axios from 'axios';
 
 class App extends Component {
   constructor(props) {

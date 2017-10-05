@@ -256,6 +256,10 @@ body {
   margin-bottom: 10px;
 }
 
+#thumb:active {
+  box-shadow: 2px 2px 5px black;
+}
+
 #whiteSpace {
   color: white;
 }

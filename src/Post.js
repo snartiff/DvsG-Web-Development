@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Subscribe from './Subscribe.js';
 import Parser from 'html-react-parser';
 import axios from 'axios';
-import { ShareButtons, ShareCounts, generateShareIcon } from 'react-share';
+import { ShareButtons, generateShareIcon } from 'react-share';
 
 const {
   LinkedinShareButton,
@@ -73,7 +73,6 @@ appendDisqus() {
 
   render() {
     let url = window.location.href;
-    let disqusDiv = document.getElementById('disqus_thread');
 
     if (this.state.posts !== null && this.state.currentPost !== null ) {
       this.appendDisqus();

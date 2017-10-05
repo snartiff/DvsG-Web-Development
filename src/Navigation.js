@@ -7,7 +7,7 @@ class Navigation extends Component {
   constructor(props) {
   super(props);
   this.state = {
-    tabName: "",
+    tabName: ""
   };
   this.handleComponentChange = this.handleComponentChange.bind(this),
   this.openLinkedIn = this.openLinkedIn.bind(this);

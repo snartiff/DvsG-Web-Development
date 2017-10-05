@@ -85,7 +85,7 @@ handleTags(tagsString) {
                   <header className="card-header">
                     <div className="thumbDiv">
                       <figure id="thumb" className="image is-64x64">
-                        <img id="blogThumb" src={post.acf.image.url}></img>
+                        <Link to={"/code_and_conquer/post/" + post.id + "/" + post.title.rendered}><img id="blogThumb" src={post.acf.image.url}></img></Link>
                       </figure>
                     </div>
                     <p className="card-header-title" id="blogHeader">

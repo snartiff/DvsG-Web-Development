@@ -23,7 +23,7 @@ handleRender(e) {
     sliceValue: value
   })
 
-  if ( document.getElementById("chartPanel").firstChild != null && document.getElementById("chartPanel").firstChild != undefined   ) {
+  if ( document.getElementById("chartPanel").firstChild !== null && document.getElementById("chartPanel").firstChild !== undefined   ) {
     document.getElementById("chartPanel").firstChild.style.backgroundColor = sliceColor;
     document.getElementById("chartPanel").firstChild.style.color = 'white';
     document.getElementById("chartPanel").firstChild.style.fontWeight = 900;
