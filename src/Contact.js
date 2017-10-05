@@ -115,10 +115,11 @@ handleSubmit(e) {
             <div className="select is-black">
               <select name="_subject" onChange={this.handleFieldChange}>
                 <option>Choose Subject</option>
-                <option>Web Development: Small Project ($2000)</option>
-                <option>Web Development: Medium Project ($4000)</option>
-                <option>Web Development: Large Project ($6000)</option>
-                <option>Logo Design: 3 Logos ($1000)</option>
+                <option>Web Development & Design: Small Project</option>
+                <option>Web Development & Design: Medium Project</option>
+                <option>Web Development & Design: Large Project</option>
+                <option>Free 30 Minute Consultation</option>
+                <option>Question</option>
                 <option>Other</option>
               </select>
             </div>

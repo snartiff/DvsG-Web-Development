@@ -69,8 +69,17 @@ openTwitter(pageName) {
           </div>
           <div className="navbar-menu" id="navMenu">
             <div className="navbar-start">
+              <div className="navbar-item has-dropdown is-hoverable">
+                <a className="navbar-link">
+                  About
+                </a>
+               <div className="navbar-dropdown">
+                 <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Mission' ? 'active': null} to="/mission">Mission</Link></li>
+                 <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Goals' ? 'active': null} to="/goals">Goals</Link></li>
+                 <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'FAQ' ? 'active': null} to="/faq">FAQ</Link></li>
+               </div>
+             </div>
               <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Blog' ? 'active': null} to="/blog">Blog</Link></li>
-              <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Mission' ? 'active': null} to="/mission">Mission</Link></li>
               <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Resume' ? 'active': null} to="/resume">Resume</Link></li>
               <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Services' ? 'active': null} to="/services">Services</Link></li>
               <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Contact' ? 'active': null} to="/contact">Contact</Link></li>
@@ -81,11 +90,13 @@ openTwitter(pageName) {
                     </span>
                 </a>
                 <span id="whiteSpace">.......</span>
-                <a className="button is-small is-info is-outlined">
-                    <span className="icon">
-                      <i className="fa fa-twitter" onClick={this.openTwitter}></i>
-                    </span>
-                </a>
+                <div id="twitter">
+                  <a className="button is-small is-outlined">
+                      <span className="icon">
+                        <i className="fa fa-twitter is-light-blue" onClick={this.openTwitter}></i>
+                      </span>
+                  </a>
+                </div>
               </div>
               <div className="navbar-item">
 

@@ -28,8 +28,17 @@ body {
     font-style: italic;
     font-size: 12px;
   }
+
   .navbar-link {
-    padding-right: 0px !important;
+    display: none;
+  }
+
+  .navbar-dropdown {
+    padding-bottom: 0px;
+  }
+
+  .navbar-dropdown a {
+    font-size: 16px;
   }
 }
 
@@ -40,6 +49,18 @@ body {
 
   .panel-block {
     font-size: 12px !important;
+  }
+
+  .navbar-link {
+    display: none;
+  }
+
+  .navbar-dropdown {
+    padding-bottom: 0px;
+  }
+
+  .navbar-dropdown a {
+    font-size: 16px;
   }
 
   #illustrationSub {
@@ -138,6 +159,11 @@ body {
   margin-right: 50px;
   margin-left: 50px;
   margin-bottom: 30px;
+}
+
+.quote {
+  color: #00d1b2;
+  font-size: 20px;
 }
 
 .active {
@@ -295,12 +321,8 @@ left: -5000px;
   font-size: 14px;
 }
 
-#navDropdown {
-  /*color: #00d1b2 !important;*/
-}
-
 .navbar-link {
-  /*color: #00d1b2 !important;*/
+  color: #00d1b2 !important;
 }
 
 #mce-error-response {
@@ -410,21 +432,11 @@ left: -5000px;
   width: 30%;
 }
 
-.Mission {
+.Goal {
   margin-top: 0px;
 }
 
 .Navigation {
-  text-align: center;
-}
-
-#missionTitle {
-  text-align: center;
-  color: #00d1b2;
-
-}
-
-#missionSub {
   text-align: center;
 }
 
@@ -438,8 +450,13 @@ left: -5000px;
   color: #00d1b2;
 }
 
+.Mission p {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
 .Msba {
-  /*background-image: url("images/paper.jpg");*/
   box-shadow: 2px 2px 5px #888888;
   opacity: 5%;
   border: .5px;
@@ -456,15 +473,53 @@ left: -5000px;
   margin-right: 50px;
 }
 
-.Mission p {
+.panel-heading:first-child, .panel-tabs:first-child, .panel-block:first-child {
+     border-top: 1px solid white;
+}
+
+.panel-heading, .panel-tabs, .panel-block {
+     border-bottom: 1px solid white;
+     border-left: 1px solid white;
+     border-right: 1px solid white;
+}
+
+
+.Goal p {
   margin-left: 50px;
   margin-right: 50px;
 }
 
-.Mission h2 {
+.Faq h1 {
+
+}
+
+.Goal h2 {
   margin-bottom: 10px !important;
-  font-weight: bolder;
+  font-weight: bold;
   margin-left: 30px;
+}
+
+.Faq p {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.Faq h1 {
+  margin-bottom: 30px;
+}
+
+.Faq h2 {
+  margin-bottom: 10px !important;
+  font-weight: bold;
+  margin-left: 30px;
+}
+
+#twitter i:hover {
+  color: black;
+}
+
+.is-light-blue {
+  color: #1DA1F2;
 }
 
 /*Services.js*/

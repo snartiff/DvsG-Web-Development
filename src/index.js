@@ -8,6 +8,8 @@ import Services from './Services';
 import Contact from './Contact';
 import Home from './Home';
 import Mission from './Mission';
+import Goal from './Goal';
+import Faq from './Faq';
 import Resume from './Resume';
 import Smallproject from './Smallproject';
 import Mediumproject from './Mediumproject';
@@ -22,6 +24,8 @@ ReactDOM.render((
       <Route path="/" component={App}/>
       <Route path="/blog" component={Blog}/>
       <Route path="/code_and_conquer/post/:id/:title" component={Post}/>
+      <Route path="/goals" component={Goal}/>
+      <Route path="/faq" component={Faq}/>
       <Route path="/mission" component={Mission}/>
       <Route path="/resume" component={Resume}/>
       <Route path="/services" component={Services}/>

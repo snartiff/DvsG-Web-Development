@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
 import Subscribe from './Subscribe.js';
 import Parser from 'html-react-parser';
 import axios from 'axios';
