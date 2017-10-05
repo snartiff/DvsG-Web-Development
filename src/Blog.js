@@ -60,7 +60,7 @@ handleTags(tagsString) {
   let tags = [];
   let tagsArray = tagsString.split(',');
   for (let tag of tagsArray) {
-    tags.push(<li key={shortid.generate()} className="tag is-primary is-rounded">{tag}</li>)
+    tags.push(<li key={shortid.generate()} className="tag is-primary is-rounded">{'#' + tag.trim()}</li>)
   }
 
   return tags

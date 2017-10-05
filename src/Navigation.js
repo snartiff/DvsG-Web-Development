@@ -69,6 +69,7 @@ openTwitter(pageName) {
           </div>
           <div className="navbar-menu" id="navMenu">
             <div className="navbar-start">
+              <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Blog' ? 'active': null} to="/blog">Blog</Link></li>
               <div className="navbar-item has-dropdown is-hoverable">
                 <a className="navbar-link">
                   About
@@ -79,7 +80,6 @@ openTwitter(pageName) {
                  <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'FAQ' ? 'active': null} to="/faq">FAQ</Link></li>
                </div>
              </div>
-              <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Blog' ? 'active': null} to="/blog">Blog</Link></li>
               <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Resume' ? 'active': null} to="/resume">Resume</Link></li>
               <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Services' ? 'active': null} to="/services">Services</Link></li>
               <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Contact' ? 'active': null} to="/contact">Contact</Link></li>

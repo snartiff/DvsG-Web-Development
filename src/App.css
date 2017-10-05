@@ -56,6 +56,7 @@ body {
   }
 
   .navbar-dropdown {
+    padding-top: 0px;
     padding-bottom: 0px;
   }
 
@@ -514,8 +515,8 @@ left: -5000px;
   margin-left: 30px;
 }
 
-#twitter i:hover {
-  color: black;
+i:hover {
+  color: black !important;
 }
 
 .is-light-blue {
