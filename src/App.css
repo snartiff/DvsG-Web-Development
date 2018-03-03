@@ -1,6 +1,10 @@
 body {
   font-family: 'Lora', serif;
 }
+
+h5 {
+  font-weight: bolder !important;
+}
 /*Responsive CSS*/
 @media (min-width: 1008px) {
   #image {
