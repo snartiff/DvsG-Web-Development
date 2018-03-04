@@ -6,7 +6,12 @@ h5 {
   font-weight: bolder !important;
 }
 
-.navbar-item {
+.navbar-link::after {
+  color: #00d1b2 !important;
+  border-color: #00d1b2 !important;
+}
+
+.is-bright-blue {
   color: #00d1b2 !important;
 }
 

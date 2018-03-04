@@ -6602,7 +6602,7 @@ a.dropdown-item.is-active {
   }
   .navbar.is-light .navbar-item.has-dropdown:hover .navbar-link,
   .navbar.is-light .navbar-item.has-dropdown.is-active .navbar-link {
-    background-color: #e8e8e8;
+    background-color: ##00d1b2;
     color: #363636;
   }
   .navbar.is-light .navbar-dropdown a.navbar-item.is-active {

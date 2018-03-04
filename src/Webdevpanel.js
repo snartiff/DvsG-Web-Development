@@ -14,7 +14,7 @@ class WebDevPanel extends Component {
     let isLargeProject = getCurrentUrl("large_project");
 
     if ( isSmallProject > -1 ) {
-      panelTitle = "Step #3: Web Development (25 Hours)";
+      panelTitle = "Step #3: Web Development (33 Hours)";
     } else if ( isMediumProject > -1 ) {
       panelTitle = "Step #3: Web Development (65 Hours)";
     } else if ( isLargeProject > -1 ) {

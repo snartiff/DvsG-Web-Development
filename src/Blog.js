@@ -84,11 +84,6 @@ handleTags(tagsString) {
               <div key={post.id}>
                 <div id="postCart" className="card">
                   <header className="card-header">
-                    <div className="thumbDiv">
-                      <figure id="thumb" className="image is-64x64">
-                        <Link to={"/code_and_conquer/post/" + post.id + "/" + post.title.rendered}><img id="blogThumb" src={post.acf.image.url}></img></Link>
-                      </figure>
-                    </div>
                     <p className="card-header-title" id="blogHeader">
                       <Link to={"/code_and_conquer/post/" + post.id + "/" + post.title.rendered}>{ Parser(post.title.rendered) }</Link>
                       <span id="date"><span id="whiteSpace">...</span>{post.acf.datepublished}</span>

@@ -38,10 +38,7 @@ handleRender(e) {
       case 2:
           description = <Smalldescription />;
           break;
-      case 6:
-          description = <WireframesPanel />;
-          break;
-      case 25:
+      case 33:
           description = <WebDevPanel />;
           break;
       case 5:
@@ -59,16 +56,12 @@ handleRender(e) {
       }],
       "theme": "dark",
       "dataProvider": [ {
-        "title": "Project Outline",
+        "title": " Project Outline",
         "value": 2
       },
      {
-       "title": "Wireframes",
-       "value": 6
-     },
-     {
        "title": "Website Development",
-       "value": 25
+       "value": 33
      },
      {
        "title": "Client Approval",
@@ -90,8 +83,7 @@ handleRender(e) {
     return (
       <div className="Smallproject">
         <div id="alignCenter">
-          <h1 id="experienceHeaders" className="title is-2">Small Project</h1>
-          <h1 className="subtitle is-6">Click a slice to get more information</h1><br />
+          <h1 id="experienceHeaders" className="title is-2">Click a slice to get more information</h1>
         </div>
         {description}
         <div className="content">

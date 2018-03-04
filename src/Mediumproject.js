@@ -90,8 +90,7 @@ handleRender(e) {
     return (
       <div className="Mediumproject">
         <div id="alignCenter">
-          <h1 id="experienceHeaders" className="title is-2">Medium Project</h1>
-          <h1 className="subtitle is-6">Click a slice to get more information</h1><br />
+          <h1 id="experienceHeaders" className="title is-2">Click a slice to get more information</h1>
         </div>
         {description}
         <div className="content">

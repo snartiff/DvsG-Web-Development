@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './bulma/bulma.css'
 import './App.css';
-import './font-awesome/css/font-awesome.min.css'
+import './font-awesome/css/font-awesome.css'
 import Navigation from './Navigation.js';
 import Home from './Home.js';
 
