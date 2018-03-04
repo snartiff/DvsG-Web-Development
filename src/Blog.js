@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Parser from 'html-react-parser';
 import {Link} from 'react-router-dom';
-// import shortid from 'shortid';
+import shortid from 'shortid';
 import axios from 'axios';
 import render from 'react-dom';
 
@@ -58,7 +58,6 @@ filterPosts(e) {
 }
 
 handleTags(tagsString) {
-  var shortid = require('shortid');
   let tags = [];
   let tagsArray = tagsString.split(',');
   for (let tag of tagsArray) {
