@@ -5,6 +5,10 @@ body {
 h5 {
   font-weight: bolder !important;
 }
+
+.navbar-item {
+  color: #00d1b2 !important;
+}
 /*Responsive CSS*/
 @media (min-width: 1008px) {
   #image {
