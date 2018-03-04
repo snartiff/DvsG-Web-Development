@@ -3,6 +3,7 @@ import Parser from 'html-react-parser';
 import {Link} from 'react-router-dom';
 import shortid from 'shortid';
 import axios from 'axios';
+import render from 'react-dom';
 
 class Blog extends Component {
   constructor(props) {

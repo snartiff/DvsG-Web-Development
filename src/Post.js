@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Subscribe from './Subscribe.js';
 import Parser from 'html-react-parser';
+import render from 'react-dom';
 import axios from 'axios';
 import { ShareButtons, generateShareIcon } from 'react-share';
 
