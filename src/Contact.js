@@ -23,13 +23,14 @@ componentDidMount() {
 handleFieldChange(e) {
   let fieldValue = e.target.value;
   let fieldName = e.target.attributes.getNamedItem('name').value;
+  var checkmarks = document.querySelectorAll(".fa-check-circle");
 
   if ( fieldName === "name" ) {
     this.setState({
       nameFieldValue: fieldValue
     })
     //Check if the Name Field has a value
-    fieldValue !== "" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
+    fieldValue !== "" ? checkmarks[0].classList.add('valid-icon') : checkmarks[0].classList.remove('valid-icon');
 
   } else if ( fieldName === "_replyto" ) {
     this.setState({
@@ -38,7 +39,7 @@ handleFieldChange(e) {
     //Use email regex expression to check if the Email is valid
     let emailRegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let isValidEmail = fieldValue.match(emailRegExp);
-    isValidEmail !== null ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
+    isValidEmail !== null ? checkmarks[1].classList.add('valid-icon') : checkmarks[1].classList.remove('valid-icon');
     if (isValidEmail) {
       this.setState({
         isValidEmail: true
@@ -54,13 +55,13 @@ handleFieldChange(e) {
       subjectValue: fieldValue
     })
     //Check if the Subject Field is not the default 'Choose Subject' value
-    fieldValue !== "Choose Subject" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
+    fieldValue !== "Choose Subject" ? checkmarks[2].classList.add('valid-icon') : checkmarks[2].classList.remove('valid-icon');
   } else {
     this.setState({
       messageFieldValue: fieldValue
     })
     //Check if the Message Field has a value
-    fieldValue !== "" ? e.currentTarget.classList.add('valid') : e.currentTarget.classList.remove('valid');
+    fieldValue !== "" ? checkmarks[3].classList.add('valid-icon') : checkmarks[3].classList.remove('valid-icon');
   }
 
     if (this.state.nameFieldValue !== "" && this.state.isValidEmail !== false && this.state.messageFieldValue !== "" && (this.state.subjectValue !== "Choose Subject" || this.state.subjectValue !== "") ) {
@@ -99,19 +100,20 @@ handleSubmit(e) {
         </div><br />
         <form action="https://formspree.io/dvsgweb@gmail.com" method="POST">
           <div className="field">
-            <label className="label"><span className="asteric">*</span> Name</label>
+            <label className="label"><span className="asteric">*</span> Name <span><i className="fa fa-check-circle"></i></span></label>
             <div className="control">
               <input className="input is-black" onChange={this.handleFieldChange} id="contactInput" type="text" type="text" name="name"></input><br></br>
+
             </div>
           </div>
           <div className="field">
-            <label className="label"><span className="asteric">*</span> Email</label>
+            <label className="label"><span className="asteric">*</span> Email <span><i className="fa fa-check-circle"></i></span></label>
             <div className="control">
               <input className="input is-black" onChange={this.handleFieldChange} id="contactInput"  type="email" name="_replyto"></input><br></br>
             </div>
           </div>
           <div className="field">
-            <label className="label"><span className="asteric">*</span> Subject</label>
+            <label className="label"><span className="asteric">*</span> Subject <span><i className="fa fa-check-circle"></i></span></label>
             <div className="select is-black">
               <select name="_subject" onChange={this.handleFieldChange}>
                 <option>Choose Subject</option>
@@ -126,7 +128,7 @@ handleSubmit(e) {
           </div>
 
           <div className="field">
-            <label className="label"><span className="asteric">*</span> Message</label>
+            <label className="label"><span className="asteric">*</span> Message <span><i className="fa fa-check-circle"></i></span></label>
             <div className="control">
               <textarea className="textarea is-black" onChange={this.handleFieldChange} id="contactInput" name="message"></textarea><br></br>
             </div>

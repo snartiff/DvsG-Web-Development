@@ -239,6 +239,10 @@ h5 {
   border-width: 2px !important;
 }
 
+.valid-icon {
+  color: #00d1b2 !important;
+}
+
 .amcharts-chart-div a {
   display: none !important;
 }
