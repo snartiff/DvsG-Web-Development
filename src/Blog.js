@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Parser from 'html-react-parser';
 import {Link} from 'react-router-dom';
-import shortid from 'shortid';
+import shortid from 'shortid32';
 import axios from 'axios';
 import render from 'react-dom';
 
