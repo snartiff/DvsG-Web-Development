@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
-import 'bulma/css/bulma.css'
-import './font-awesome/css/font-awesome.min.css'
-import knight from './images/knight.svg'
-import monster from './images/monster.svg'
+import knight from './images/knight.svg';
+import monster from './images/monster.svg';
 
 
 class Home extends Component {

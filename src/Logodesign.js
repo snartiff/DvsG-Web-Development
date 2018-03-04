@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css';
-import './font-awesome/css/font-awesome.min.css';
-
 
 class Logodesign extends Component {
   constructor(props) {

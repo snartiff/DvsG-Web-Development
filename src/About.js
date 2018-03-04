@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-// import 'bulma/css/bulma.css'
-import bulma from 'bulma';
-import './font-awesome/css/font-awesome.min.css'
 import {Link} from 'react-router-dom';
 import Mission from './Mission.js';
 import {getActiveTab} from './Helpers.js';

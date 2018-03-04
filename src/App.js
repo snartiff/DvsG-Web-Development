@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css'
+import 'bulma/css/bulma.css';
 import './App.css';
 import './font-awesome/css/font-awesome.min.css'
 import Navigation from './Navigation.js';

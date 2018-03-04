@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import 'bulma/css/bulma.css'
-import './font-awesome/css/font-awesome.min.css'
 import {Link} from 'react-router-dom';
 import {getActiveTab} from './Helpers.js';
 import Launch from './Launch.js';
