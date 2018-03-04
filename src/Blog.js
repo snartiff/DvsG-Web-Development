@@ -18,7 +18,7 @@ class Blog extends Component {
 }
 
 componentDidMount() {
-  axios.get('http://www.dvsgblog.com/wp-json/wp/v2/dvsgpost')
+  axios.get('https://www.dvsgblog.com/wp-json/wp/v2/dvsgpost')
     .then( (response) => {
       this.setState({
         posts: response.data,
