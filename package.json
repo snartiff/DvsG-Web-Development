@@ -13,9 +13,6 @@
     "react-router-dom": "^4.1.1",
     "react-share": "^1.16.0"
   },
-  "resolve": {
-    "extensions": "['.ts', '.js']"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
