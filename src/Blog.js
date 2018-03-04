@@ -72,7 +72,7 @@ handleTags(tagsString) {
       return (
         <div className="Blog">
           <div id="alignCenter">
-            <h1 id="blogTitle" className="title is-2">Code and Conquer</h1>
+            <h1 id="blogTitle">Code and Conquer</h1>
           </div>
           <div id="searchbar" className="control has-icons-left has-icons-right">
             <input className="input is-black" onKeyUp={this.filterPosts} type="text" placeholder="filter posts by title or tag"></input>

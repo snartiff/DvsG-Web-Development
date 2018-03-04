@@ -86,13 +86,13 @@ openTwitter(pageName) {
               <div className="navbar-item">
                 <a className="button is-small is-warning is-outlined">
                     <span className="icon">
-                      <i className="fa fa-linkedin" onClick={this.openLinkedIn}></i>
+                      <i className="fa fa-linkedin fa-lg" onClick={this.openLinkedIn}></i>
                     </span>
                 </a>
                 <span id="whiteSpace">.......</span>
                   <a className="button is-small is-outlined">
                       <span className="icon">
-                        <i className="fa fa-twitter is-light-blue" onClick={this.openTwitter}></i>
+                        <i className="fa fa-twitter fa-lg is-light-blue" onClick={this.openTwitter}></i>
                       </span>
                   </a>
               </div>

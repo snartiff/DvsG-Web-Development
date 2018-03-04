@@ -9,6 +9,10 @@ h5 {
 .navbar-item {
   color: #00d1b2 !important;
 }
+
+.fa fa-linkedin {
+  font-size: 14px;
+}
 /*Responsive CSS*/
 @media (min-width: 1008px) {
   #image {
