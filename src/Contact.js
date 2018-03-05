@@ -98,7 +98,7 @@ handleSubmit(e) {
           <h1 className="title is-2">Contact</h1>
           <h2 className={this.state.emailIsSent ? "subtitle is-6 is-aqua" : "subtitle is-6"}>{infoMessage}</h2>
         </div><br />
-        <form action="https://formspree.io/dvsgweb@gmail.com" method="POST">
+      <form action="https://formspree.io/sean.nartiff@dvsgweb.com" method="POST">
           <div className="field">
             <label className="label"><span className="asteric">*</span> Name <span><i className="fa fa-check-circle"></i></span></label>
             <div className="control">
