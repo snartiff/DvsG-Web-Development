@@ -90,8 +90,8 @@ handleRender(e) {
     return (
       <div className="Largeproject">
         <div id="alignCenter">
-          <h1 id="experienceHeaders" className="title is-2">Click a slice to get more information</h1>
-        </div>
+          <h1 id="experienceHeaders" className="title is-2">Click a slice to learn more</h1>
+        </div><br />
         {description}
         <div className="content">
           <AmCharts.React style={{ width: "100%", height: "500px" }} options={config} />
