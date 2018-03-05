@@ -18,7 +18,7 @@ import registerServiceWorker from './registerServiceWorker';
 import { BrowserRouter, Route} from 'react-router-dom';
 
 ReactDOM.render((
-  <BrowserRouter history={hashHistory}>
+  <BrowserRouter>
     <div>
       <Route path="/" component={App}/>
       <Route path="/blog" component={Blog}/>
