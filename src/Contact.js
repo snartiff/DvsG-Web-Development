@@ -136,7 +136,7 @@ handleSubmit(e) {
           <div className="field">
             <input className={this.state.areValid ? "button is-primary is-medium" : "button is-primary is-medium is-outlined"} onClick={this.handleSubmit} id="submitButton" type="submit" value="Send"></input>
           </div>
-          <input type="hidden" name="_next" value="//localhost:3000/contact" />
+          <input type="hidden" name="_next" value="http://www.dvsgweb.com/contact" />
         </form>
       </div>
     );
