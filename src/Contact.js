@@ -63,13 +63,6 @@ handleFieldChange(e) {
     //Check if the Message Field has a value
     fieldValue !== "" ? checkmarks[3].classList.add('valid-icon') : checkmarks[3].classList.remove('valid-icon');
   }
-
-    if (this.state.nameFieldValue !== "" && this.state.isValidEmail !== false && this.state.messageFieldValue !== "" && (this.state.subjectValue !== "Choose Subject" || this.state.subjectValue !== "") ) {
-      document.getElementById("submitButton").disabled = false;
-      this.setState({
-        areValid: true
-      })
-    }
 }
 
 handleSubmit(e) {
@@ -91,6 +84,18 @@ handleSubmit(e) {
     } else {
       infoMessage = "Please complete all fields"
     }
+
+    var validIcons = document.querySelectorAll(".valid-icon");
+    var allValid = validIcons.length;
+
+    if (document.getElementById("submitButton") != null) {
+        if (allValid === 4) {
+          document.getElementById("submitButton").disabled = false;
+        }  else {
+          document.getElementById("submitButton").disabled = true;
+        }
+    }
+
 
     return (
       <div className="Contact">
@@ -134,7 +139,7 @@ handleSubmit(e) {
             </div>
           </div>
           <div className="field">
-            <input className={this.state.areValid ? "button is-primary is-medium" : "button is-primary is-medium is-outlined"} onClick={this.handleSubmit} id="submitButton" type="submit" value="Send"></input>
+            <input className={allValid === 4 ? "button is-primary is-medium" : "button is-primary is-medium is-outlined"} onClick={this.handleSubmit} id="submitButton" type="submit" value="Send"></input>
           </div>
           <input type="hidden" name="_next" value="http://www.dvsgweb.com/contact" />
         </form>
