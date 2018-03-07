@@ -19,10 +19,10 @@ class Goal extends Component {
         We'll create an outline of your website and decide what the objective of your site truly is. Once we establish an objective, we'll discuss what your call-to-action will be and how to bring attention to it.
       </p><br/>
       <h2 className="subtitle is-5">
-        2.) Mobile-First Design
+        2.) Mobile-Responsive Design
       </h2>
         <p>
-          I'll help you succeed by using mobile-first design. Your site will look great on both a cell phone
+          I'll help you succeed by using mobile-respnsive design. Your site will look great on both a cell phone
           and a desktop computer. I will leverage proven CSS styling frameworks and test your site on several different-sized
           devices.
         </p><br />
