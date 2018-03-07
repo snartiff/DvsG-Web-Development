@@ -22,7 +22,7 @@ class Goal extends Component {
         2.) Mobile-Responsive Design
       </h2>
         <p>
-          I'll help you succeed by using mobile-respnsive design. Your site will look great on both a cell phone
+          I'll help you succeed by using mobile-responsive design. Your site will look great on both a cell phone
           and a desktop computer. I will leverage proven CSS styling frameworks and test your site on several different-sized
           devices.
         </p><br />
