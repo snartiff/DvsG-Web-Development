@@ -21,7 +21,7 @@ ReactDOM.render((
   <BrowserRouter>
     <div>
       <Route path="/" component={App}/>
-      <Route path="/blog" component={Blog}/>
+      <Route path="/code_and_conquer" component={Blog}/>
       <Route path="/code_and_conquer/post/:id/:title" component={Post}/>
       <Route path="/goals" component={Goal}/>
       <Route path="/faq" component={Faq}/>
