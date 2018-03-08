@@ -69,7 +69,7 @@ openTwitter(pageName) {
           </div>
           <div className="navbar-menu" id="navMenu">
             <div className="navbar-start">
-              <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Blog' ? 'active': null} to="/code_and_conquer">Blog</Link></li>
+              <li className="navbar-item"><Link onClick={this.handleComponentChange} className={this.state.tabName === 'Blog' ? 'active': null} to="/blog">Blog</Link></li>
               <div className="navbar-item has-dropdown is-hoverable">
                 <a className="navbar-link">
                   About
