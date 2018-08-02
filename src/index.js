@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import Blog from './Blog';
 import Post from './Post';
 import Services from './Services';
 import Contact from './Contact';
@@ -21,7 +20,6 @@ ReactDOM.render((
   <BrowserRouter>
     <div>
       <Route path="/" component={App}/>
-      <Route path="/blog" component={Blog}/>
       <Route path="/code_and_conquer/post/:id/:title" component={Post}/>
       <Route path="/goals" component={Goal}/>
       <Route path="/faq" component={Faq}/>
